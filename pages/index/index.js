@@ -1,13 +1,15 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const tabbar = require("../../template/tabbar");
 
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    tabbarActiveIndex: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -43,6 +45,10 @@ Page({
       })
     }
   },
+  onShow() {
+    wx.hideTabBar();
+  },
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -50,5 +56,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  tabbarRouteTeach(e) {
+    tabbar.routeTeach(e, this);
   }
 })

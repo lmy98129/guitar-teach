@@ -1,13 +1,51 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "template/tabbar"
+    "pages/complete/complete",
+    "pages/write/write",
+    "pages/friends/friends",
+    "pages/data/data"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "易音",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cbcbcb",
+    "selectedColor": "#44b2b8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/homepage.png",
+        "selectedIconPath": "images/homepage-hl.png"
+      },
+      {
+        "pagePath": "pages/complete/complete",
+        "text": "录制",
+        "iconPath": "images/complete.png",
+        "selectedIconPath": "images/complete-hl.png"
+      },
+      {
+        "pagePath": "pages/write/write",
+        "text": "写谱",
+        "iconPath": "images/write.png",
+        "selectedIconPath": "images/write-hl.png"
+      },
+      {
+        "pagePath": "pages/friends/friends",
+        "text": "学生",
+        "iconPath": "images/friends.png",
+        "selectedIconPath": "images/friends-hl.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "我的",
+        "iconPath": "images/data.png",
+        "selectedIconPath": "images/data-hl.png"
+      }
+    ]
   }
 }

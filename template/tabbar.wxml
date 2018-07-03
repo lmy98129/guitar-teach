@@ -1,2 +1,40 @@
-<!--template/tabbar.wxml-->
-<text>template/tabbar.wxml</text>
+<template name="tabbar">
+  <view class="tabbar-wrap">
+
+    <view bindtap="tabbarRouteTeach" data-index="0">
+      <image src="{{tabbarActiveIndex == 0?'/images/homepage-hl.png':'/images/homepage.png'}}"></image>
+      <view style="color: {{tabbarActiveIndex == 0?'#44b2b8':'#cbcbcb'}}">
+        首页
+      </view>
+    </view>
+
+    <view bindtap="tabbarRouteTeach" data-index="1">
+      <image src="{{tabbarActiveIndex == 1?'/images/complete-hl.png':'/images/complete.png'}}"></image>
+      <view style="color: {{tabbarActiveIndex == 1?'#44b2b8':'#cbcbcb'}}">
+        录制
+      </view>
+    </view>    
+
+    <view bindtap="tabbarRouteTeach" data-index="2">
+      <image src="{{tabbarActiveIndex == 2?'/images/write-hl.png':'/images/write.png'}}"></image>
+      <view style="color: {{tabbarActiveIndex == 2?'#44b2b8':'#cbcbcb'}}">
+        写谱
+      </view>
+    </view>
+
+    <view bindtap="tabbarRouteTeach" data-index="3">
+      <image src="{{tabbarActiveIndex == 3?'/images/friends-hl.png':'/images/friends.png'}}"></image>
+      <view style="color: {{tabbarActiveIndex == 3?'#44b2b8':'#cbcbcb'}}">
+        学生
+      </view>
+    </view>
+
+    <view bindtap="tabbarRouteTeach" data-index="4">
+      <image src="{{tabbarActiveIndex == 4?'/images/data-hl.png':'/images/data.png'}}"></image>
+      <view style="color: {{tabbarActiveIndex == 4?'#44b2b8':'#cbcbcb'}}">
+        我的
+      </view>
+    </view>
+
+  </view>
+</template>
