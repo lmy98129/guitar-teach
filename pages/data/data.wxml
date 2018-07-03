@@ -1,2 +1,3 @@
 <!--pages/data/data.wxml-->
-<text>pages/data/data.wxml</text>
+<import src="/template/tabbar" />
+<template is="tabbar" data="{{tabbarActiveIndex}}"></template>

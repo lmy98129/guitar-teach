@@ -1,1 +1,2 @@
 /* pages/friends/friends.wxss */
+@import "/template/tabbar.wxss";

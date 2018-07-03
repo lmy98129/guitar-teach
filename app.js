@@ -36,6 +36,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    tabbarActiveIndex: 0
   }
 })

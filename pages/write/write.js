@@ -1,11 +1,13 @@
 // pages/write/write.js
+const tabbar = require("../../template/tabbar");
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    tabbarActiveIndex: 2
   },
 
   /**
@@ -62,5 +64,9 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  tabbarRouteTeach(e) {
+    tabbar.routeTeach(e, this);
   }
 })

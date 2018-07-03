@@ -1,1 +1,2 @@
 /* pages/write/write.wxss */
+@import "/template/tabbar.wxss";

@@ -1,3 +1,5 @@
+const appData = getApp().globalData;
+
 const tabbarRouteTeach = (e, that) => {
   console.log("tabbar跳转到页面：", e.currentTarget.dataset.index);
   var index = e.currentTarget.dataset.index;
@@ -29,10 +31,7 @@ const tabbarRouteTeach = (e, that) => {
       break;
     
   }
-  that.setData({
-    tabbarActiveIndex: parseInt(index)
-  });
-  getApp().globalData.tabbarActiveIndex = parseInt(index);
+  appData.tabbarActiveIndex = parseInt(index);
 }
 
 module.exports = {

@@ -1,2 +1,4 @@
 <!--pages/complete/complete.wxml-->
-<text>pages/complete/complete.wxml</text>
+<import src="/template/tabbar" />
+<template is="tabbar" data="{{tabbarActiveIndex}}"></template>
+
