@@ -1,23 +1,143 @@
 /**index.wxss**/
 @import "/template/tabbar.wxss";
 
-.userinfo {
+.msg-list-video {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.msg-list-top {
+  height: 140rpx;
+}
+
+.msg-list-top.ipx{
+  height: 180rpx;
+}
+
+.video-img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: 375rpx;
+  margin-bottom: 20rpx;
+}
+
+.video-img .cover-img {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  height: 375rpx;
+  z-index: 55;
+}
+
+.video-img .play-btn {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+  top: -260rpx;
+  margin: 0 auto;
+  z-index: 60;
+}
+
+.info-wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.info-wrap .upper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.info-wrap .upper .user-info {
+  display: flex;
+  flex-direction: row;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.info-wrap .upper .date {
+  line-height: 65rpx;
+  font-size: 30rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.user-info {
+  line-height: 65rpx;
+  font-size: 35rpx;
+}
+
+.user-info .avatar image {
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.user-info .avatar {
+  height: 75rpx;
+}
+
+.user-info .nickname {
+  margin-left: 20rpx;
+}
+
+.info-wrap .down {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1rpx solid #cdcdcd
+}
+
+.info-wrap .down .title {
+  margin-left: 80rpx;
+  font-size: 30rpx;
+}
+
+.msg-list-bottom {
+  height: 180rpx;
+}
+
+.top-widget {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  padding-top: 60rpx;
+  padding-bottom: 15rpx;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.top-widget.ipx {
+  padding-top: 105rpx;
+}
+
+.top-widget .message image {
+  width: 50rpx;
+  height: 40rpx;
+  padding-right: 230rpx;
+  padding-top: 13rpx;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40rpx;
+  width: 40%;
+  background-color: #eee;
+  padding-left: 25rpx;
+  padding-right: 80rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  border-radius: 20rpx;
+}
+
+.search-bar image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search-bar .tip {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  color: #666;
 }

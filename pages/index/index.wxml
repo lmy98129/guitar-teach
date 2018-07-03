@@ -1,15 +1,46 @@
 <!--index.wxml-->
 <import src="/template/tabbar" />
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="top-widget">
+  <view class="search-bar">
+    <image src="/images/search.png"></image>
+    <view class="tip">
+      搜索作品、发布者
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="message">
+    <image src="/images/message.png"></image>
   </view>
-  <template is="tabbar" data="{{tabbarActiveIndex}}"></template>
 </view>
+<view class="root">
+  <view class="msg-list-top"></view>
+  <block wx:for="{{msgContent}}" wx:key="{{index}}">
+    <view class="msg-list-video">
+      <view class="video-img" bindtap="bindVideoCover">
+        <image class="cover-img" src="/images/img-video.png"></image>
+        <image class="play-btn" src="/images/play.png"></image>
+      </view>
+      <view class="info-wrap">
+        <view class="upper">
+          <view class="user-info">
+            <view class="avatar">
+              <image src="/images/portrait.png"></image>
+            </view>
+            <view class="nickname">
+              xx老师
+            </view>
+          </view>
+          <view class="date">
+            2018/07/03
+          </view>
+        </view>
+        <view class="down">
+          <view class="title">
+            《十年》
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="msg-list-bottom"></view>
+</view>
+<template is="tabbar" data="{{tabbarActiveIndex}}"></template>

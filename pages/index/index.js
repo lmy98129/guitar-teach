@@ -5,11 +5,10 @@ const tabbar = require("../../template/tabbar");
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    tabbarActiveIndex: 0
+    isIpx: false,
+    isIp4: false,
+    tabbarActiveIndex: 0,
+    msgContent: [0, 0, 0, 0, 0, 0]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -60,5 +59,9 @@ Page({
 
   tabbarRouteTeach(e) {
     tabbar.routeTeach(e, this);
+  },
+
+  bindVideoCover() {
+    
   }
 })

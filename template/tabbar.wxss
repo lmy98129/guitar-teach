@@ -9,7 +9,8 @@
   padding-top: 20rpx;
   padding-bottom: 35rpx;
   border-top: .5px solid #cccccc;
-  background-color: rgba(256,256,256,0.9);
+  background-color: #fff;
+  z-index: 100;
 }
 
 .tabbar-wrap view {
