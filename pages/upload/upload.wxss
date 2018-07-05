@@ -1,0 +1,12 @@
+/* pages/upload/upload.wxss */
+@import "../index/index.wxss";
+
+.upload-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+page {
+  overflow: hidden;
+}

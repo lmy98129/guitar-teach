@@ -1,14 +1,11 @@
-// pages/write/write.js
-const tabbar = require("../../template/tabbar");
-
+// pages/upload/upload.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabbarActiveIndex: 2,
-    compList: []
+  
   },
 
   /**
@@ -22,11 +19,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    let res = ['爱的初体验', 'ABCDE', '阿喵', '背叛', '宝贝', '童年', '小星星'];
-    res.sort((a, b) => a.localeCompare(b, 'zh-Hans-CN', {sensitivity: 'accent'}));
-    this.setData({
-      compList: res
-    })
+  
   },
 
   /**
@@ -71,13 +64,9 @@ Page({
   
   },
 
-  tabbarRouteTeach(e) {
-    tabbar.routeTeach(e, this);
-  },
-
-  bindUpload() {
-    wx.navigateTo({
-      url: '../upload/upload',
-    })
+  bindBack() {
+    wx.navigateBack({
+      delta: 2
+    });
   }
 })

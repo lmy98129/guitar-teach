@@ -1,3 +1,30 @@
 <!--pages/write/write.wxml-->
 <import src="/template/tabbar" />
+<view class="top-widget">
+  <view class="btn new" bindtap="bindUpload">
+    <image src="/images/record.png"></image>
+  </view>
+  <view class="btn search">
+    <image src="/images/search.png"></image>
+  </view> 
+  <view class="page-title">
+    我的乐谱
+  </view>
+</view>
+<view class="root">
+  <view class="msg-list-top"></view>
+  <view class="comp-list-wrap">
+    <block wx:for="{{compList}}" wx:key="{{index}}">
+      <view class="comp-list-item">
+        <view class="title">
+          {{item}}
+        </view>
+        <view class="arrow">
+          >
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="msg-list-bottom"></view>
+</view>
 <template is="tabbar" data="{{tabbarActiveIndex}}"></template>

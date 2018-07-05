@@ -1,2 +1,36 @@
 /* pages/write/write.wxss */
 @import "/template/tabbar.wxss";
+@import "/pages/index/index.wxss";
+
+.top-widget .btn.search image{
+  position: fixed;
+  margin-left: 120rpx;
+  width: 50rpx;
+  height: 50rpx;
+  padding-top: 6rpx;
+}
+
+.comp-list-item {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  background-color:#fff;
+  border-bottom: .5rpx solid #666;
+  font-size: 40rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.comp-list-item:first-child {
+  margin-top: 20rpx;
+}
+
+.comp-list-item .title {
+  position: relative;
+  left: 60rpx;
+}
+
+.comp-list-item .arrow {
+  position: fixed;
+  right: 100rpx;
+}

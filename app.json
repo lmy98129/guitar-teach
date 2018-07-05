@@ -4,7 +4,8 @@
     "pages/complete/complete",
     "pages/write/write",
     "pages/friends/friends",
-    "pages/data/data"
+    "pages/data/data",
+    "pages/upload/upload"
   ],
   "window": {
     "backgroundTextStyle": "light",

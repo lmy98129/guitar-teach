@@ -58,20 +58,6 @@
   margin-top: 20rpx;
 }
 
-.top-widget .page-title {
-  margin: 0 auto;
-  font-size: 35rpx;
-  padding-bottom: 15rpx;
-  padding-top: 5rpx;
-}
-
-.top-widget .btn.new image{
-  width: 40rpx;
-  height: 40rpx;
-  padding-top: 8rpx;
-  position: fixed;
-  padding-left: 50rpx;
-}
 
 
 

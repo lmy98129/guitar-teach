@@ -7,14 +7,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabbarActiveIndex: 3
+    tabbarActiveIndex: 3,
+    stuList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
 
   /**
@@ -28,7 +29,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var arr = new Array(9), i = arr.length;
+    while (i--) { arr[i] = 0; }
+    this.setData({
+      stuList: arr
+    })
   },
 
   /**

@@ -1,2 +1,46 @@
 /* pages/friends/friends.wxss */
 @import "/template/tabbar.wxss";
+@import "../index/index.wxss";
+
+.top-widget .btn.msg image {
+    position: fixed;
+    margin-left: 130rpx;
+    width: 50rpx;
+    height: 40rpx;
+    padding-top: 13rpx;
+}
+
+.top-widget .btn.add-stu image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.stu-list-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.stu-list-wrap:after {
+  content: "";
+  flex: auto;
+}
+
+.stu-list-item {
+  background-color: #fff;
+  margin: 15rpx;
+  padding: 15rpx;
+}
+
+.stu-list-item .avatar {
+  width: 130rpx;
+  height: 130rpx;
+  margin: 0 auto;
+}
+
+.stu-list-item .nickname {
+  margin: 0 auto;
+  font-size: 30rpx;
+  text-align: center;
+}

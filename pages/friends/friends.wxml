@@ -1,3 +1,28 @@
 <!--pages/friends/friends.wxml-->
 <import src="/template/tabbar" />
+<view class="top-widget">
+  <view class="btn add-stu new">
+    <image src="/images/add-student.png"></image>
+  </view>
+  <view class="btn msg">
+    <image src="/images/message.png"></image>
+  </view> 
+  <view class="page-title">
+    我的学生
+  </view>
+</view>
+<view class="root">
+  <view class="msg-list-top"></view>
+  <view class="stu-list-wrap">
+    <block wx:for="{{stuList}}" wx:key="{{index}}">
+      <view class="stu-list-item">
+        <image src="/images/portrait.png" class="avatar"></image>
+        <view class="nickname">
+          我的学生
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="msg-list-bottom"></view>
+</view>
 <template is="tabbar" data="{{tabbarActiveIndex}}"></template>

@@ -1,0 +1,13 @@
+<!--pages/upload/upload.wxml-->
+<view class="top-widget">
+  <view class="btn back new" bindtap="bindBack">
+    <image src="/images/back.png"></image>
+  </view>
+  <view class="page-title">
+    乐谱录制
+  </view>
+</view>
+<view class="msg-list-top"></view>
+<view class="root">
+  <image src="/images/bg.jpeg" class="upload-bg"></image>
+</view>
