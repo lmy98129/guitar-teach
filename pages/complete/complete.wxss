@@ -1,2 +1,77 @@
 /* pages/complete/complete.wxss */
 @import "/template/tabbar.wxss";
+@import "/pages/index/index.wxss";
+
+.msg-list-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.msg-list-video {
+  width: 45%;
+  margin-left: 20rpx;
+  margin-right: 16rpx;
+}
+
+.video-img .cover-img {
+  height: 180rpx;
+  width: 80%;
+}
+
+.video-img .play-btn {
+  top: -160rpx;
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.video-img {
+  height: 180rpx;
+}
+
+.info-wrap .upper .title {
+  font-size: 30rpx;
+}
+
+.info-wrap .upper .date {
+  line-height: normal;
+}
+
+.msg-list-video.new {
+  height: 240rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.msg-list-video.new .add-btn {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 55rpx;
+}
+
+.msg-list-video.new .add-note {
+  margin: 0 auto;
+  font-size: 30rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+.top-widget .page-title {
+  margin: 0 auto;
+  font-size: 35rpx;
+  padding-bottom: 15rpx;
+  padding-top: 5rpx;
+}
+
+.top-widget .btn.new image{
+  width: 40rpx;
+  height: 40rpx;
+  padding-top: 8rpx;
+  position: fixed;
+  padding-left: 50rpx;
+}
+
+
+

@@ -1,4 +1,40 @@
 <!--pages/complete/complete.wxml-->
 <import src="/template/tabbar" />
+<view class="top-widget">
+  <view class="btn new">
+    <image src="/images/record.png"></image>
+  </view>
+  <view class="page-title">
+    我的视频
+  </view>
+</view>
+<view class="root">
+  <view class="msg-list-top"></view>
+  <view class="msg-list-wrap">
+    <block wx:for="{{msgContent}}" wx:key="{{index}}">
+      <view class="msg-list-video">
+        <view class="video-img" bindtap="bindVideoCover">
+          <image class="cover-img" src="/images/img-video.png"></image>
+          <image class="play-btn" src="/images/play.png"></image>
+        </view>
+        <view class="info-wrap">
+          <view class="upper">
+            <view class="title">
+              《十年》
+            </view>
+            <view class="date">
+              2018/07/03
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="msg-list-video new">
+      <image src="/images/add.png" class="add-btn"></image>
+      <view class="add-note">录制视频</view>
+    </view>
+  </view>
+  <view class="msg-list-bottom"></view>
+</view>
 <template is="tabbar" data="{{tabbarActiveIndex}}"></template>
 

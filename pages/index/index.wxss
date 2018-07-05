@@ -111,7 +111,7 @@
   padding-top: 105rpx;
 }
 
-.top-widget .message image {
+.top-widget .btn image {
   width: 50rpx;
   height: 40rpx;
   padding-right: 230rpx;

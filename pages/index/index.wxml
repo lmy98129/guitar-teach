@@ -7,7 +7,7 @@
       搜索作品、发布者
     </view>
   </view>
-  <view class="message">
+  <view class="btn message">
     <image src="/images/message.png"></image>
   </view>
 </view>

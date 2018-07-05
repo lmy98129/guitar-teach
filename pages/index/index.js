@@ -8,7 +8,7 @@ Page({
     isIpx: false,
     isIp4: false,
     tabbarActiveIndex: 0,
-    msgContent: [0, 0, 0, 0, 0, 0]
+    msgContent: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -46,6 +46,11 @@ Page({
   },
   onShow() {
     wx.hideTabBar();
+    var arr = new Array(10), i = arr.length;
+    while(i--) { arr[i]=0; }
+    this.setData({
+      msgContent: arr
+    })
   },
 
   getUserInfo: function(e) {
