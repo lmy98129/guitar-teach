@@ -1,3 +1,90 @@
 <!--pages/data/data.wxml-->
 <import src="/template/tabbar" />
+<view class="usr-bg"></view>
+<view class="usr-avatar">
+  <image src="/images/portrait.png"></image>
+</view>
+<view class="usr-nickname">
+  Mr.Liu
+</view>
+<view class="root">
+  <view class="usr-dt-group">
+    <view class="usr-dt-item">
+      <view class="title">
+        姓名
+      </view>
+      <view class="arrow">
+        刘先生 >
+      </view>
+    </view>
+    <view class="usr-dt-item">
+      <view class="title">
+        性别
+      </view>
+      <view class="arrow">
+        男 >
+      </view>
+    </view>
+    <view class="usr-dt-item">
+      <view class="title">
+        生日
+      </view>
+      <view class="arrow">
+        1990/09/20 >
+      </view>
+    </view>
+  </view>
+  <view class="usr-dt-group">
+    <view class="usr-dt-item">
+      <view class="title">
+        所在地
+      </view>
+      <view class="arrow">
+        北京市海淀区 >
+      </view>
+    </view>
+    <view class="usr-dt-item">
+      <view class="title">
+        职业
+      </view>
+      <view class="arrow">
+        请输入 >
+      </view>
+    </view>
+    <view class="usr-dt-item">
+      <view class="title">
+        邮箱
+      </view>
+      <view class="arrow">
+        5348138489@qq.com >
+      </view>
+    </view>
+  </view>
+  <view class="usr-dt-group">
+    <view class="usr-dt-item">
+      <view class="title">
+        我的视频
+      </view>
+      <view class="arrow">
+        >
+      </view>
+    </view>
+    <view class="usr-dt-item">
+      <view class="title">
+        我的谱子
+      </view>
+      <view class="arrow">
+        >
+      </view>
+    </view>
+    <view class="usr-dt-item">
+      <view class="title">
+        通讯录
+      </view>
+      <view class="arrow">
+        >
+      </view>
+    </view>
+  </view>
+</view>
 <template is="tabbar" data="{{tabbarActiveIndex}}"></template>

@@ -1,2 +1,66 @@
 /* pages/data/data.wxss */
 @import "/template/tabbar.wxss";
+
+page {
+  overflow: hidden;
+}
+
+.root {
+  position: fixed;
+  top: 420rpx;
+}
+
+.usr-bg {
+  height: 300rpx;
+  width: 100%;
+  background-color: rgb(15, 23, 38);
+}
+
+.usr-avatar image {
+  width: 150rpx;
+  height: 150rpx;
+  position: fixed;
+  top: 200rpx;
+  left: 60rpx;
+  border-radius: 100rpx;
+}
+
+.usr-nickname {
+  position: fixed;
+  top: 340rpx;
+  left: 200rpx;
+  font-size: 35rpx;
+}
+
+.usr-dt-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;  
+}
+
+.usr-dt-item {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  background-color:#fff;
+  border-bottom: .5rpx solid #666;
+  font-size: 35rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.usr-dt-item:last-child {
+  border-bottom: none;
+}
+
+.usr-dt-item .title {
+  position: relative;
+  left: 60rpx;
+}
+
+.usr-dt-item .arrow {
+  position: fixed;
+  right: 100rpx;
+  color: #666;
+}
+
