@@ -5,7 +5,8 @@
     "pages/write/write",
     "pages/friends/friends",
     "pages/data/data",
-    "pages/upload/upload"
+    "pages/upload/upload",
+    "pages/class/class"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,16 +26,16 @@
         "selectedIconPath": "images/homepage-hl.png"
       },
       {
-        "pagePath": "pages/complete/complete",
-        "text": "录制",
-        "iconPath": "images/complete.png",
-        "selectedIconPath": "images/complete-hl.png"
-      },
-      {
         "pagePath": "pages/write/write",
         "text": "写谱",
         "iconPath": "images/write.png",
         "selectedIconPath": "images/write-hl.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "课堂",
+        "iconPath": "images/class.png",
+        "selectedIconPath": "images/class-hl.png"
       },
       {
         "pagePath": "pages/friends/friends",

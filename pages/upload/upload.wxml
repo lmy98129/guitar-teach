@@ -3,6 +3,9 @@
   <view class="btn back new" bindtap="bindBack">
     <image src="/images/back.png"></image>
   </view>
+  <view class="btn second">
+    <image src="/images/save.png"></image>
+  </view>
   <view class="page-title">
     乐谱录制
   </view>
@@ -10,4 +13,35 @@
 <view class="msg-list-top"></view>
 <view class="root">
   <image src="/images/bg.jpeg" class="upload-bg"></image>
+  <scroll-view scroll-y="true" scroll-x="false" style="height: 50%;" scroll-top="{{scrollTop}}">
+    <view class="input-wrapper">
+      <view class="key-wrapper" wx:for="{{keyArray}}" wx:key="{{index}}">
+        <text class="tune" decode="true">{{item.tune}}</text>
+        <text class="key {{item.style == 'High'?'high':''}} {{item.style == 'Low'?'low':''}}" decode="true">{{item.key}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="keyboard-wrapper">
+    <view class="keyboard-left">
+      <view class="key {{style=='Finger'?'active':''}}" bindtap="setStyle" data-style="Finger">指弹</view>
+      <view class="key {{tune=='Chord'?'active':''}}" bindtap="setTune" data-tune="Chord">和弦</view>
+      <view class="key {{style=='High'?'active':''}}" bindtap="setStyle" data-style="High">高音</view>
+      <view class="key {{tune=='Up'?'active':''}}" bindtap="setTune" data-tune="Up">升</view>
+      <view class="key {{style=='Mid'?'active':''}}" bindtap="setStyle" data-style="Mid">中音</view>
+      <view class="key {{tune=='Normal'?'active':''}}" bindtap="setTune" data-tune="Normal">正常</view>
+      <view class="key {{style=='Low'?'active':''}}" bindtap="setStyle" data-style="Low">低音</view>
+      <view class="key {{tune=='Down'?'active':''}}" bindtap="setTune" data-tune="Down">降</view>
+    </view>
+    <view class="keyboard-right">
+      <view class="key" bindtap="inputKey" data-key='1'>1</view>
+      <view class="key" bindtap="inputKey" data-key='2'>2</view>
+      <view class="key" bindtap="inputKey" data-key='3'>3</view>
+      <view class="key" bindtap="inputKey" data-key='4'>4</view>
+      <view class="key" bindtap="inputKey" data-key='5'>5</view>
+      <view class="key" bindtap="inputKey" data-key='6'>6</view>
+      <view class="key" bindtap="inputKey" data-key='7'>7</view>
+      <view class="key" bindtap="inputKey" data-key='space'>_</view>
+      <view class="key" bindtap="inputKey" data-key='del'>←</view>
+    </view>
+  </view>
 </view>

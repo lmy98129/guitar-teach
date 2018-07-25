@@ -154,7 +154,7 @@
   height: 40rpx;
   padding-top: 8rpx;
   position: fixed;
-  padding-left: 50rpx;
+  padding-left: 30rpx;
 }
 
 .top-widget .btn.back image {

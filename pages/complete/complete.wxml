@@ -1,5 +1,5 @@
 <!--pages/complete/complete.wxml-->
-<import src="/template/tabbar" />
+<!-- <import src="/template/tabbar" /> -->
 <view class="top-widget">
   <view class="btn new">
     <image src="/images/record.png"></image>
@@ -36,5 +36,5 @@
   </view>
   <view class="msg-list-bottom"></view>
 </view>
-<template is="tabbar" data="{{tabbarActiveIndex}}"></template>
+<!-- <template is="tabbar" data="{{tabbarActiveIndex}}"></template> -->
 

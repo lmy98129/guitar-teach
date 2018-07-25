@@ -1,5 +1,5 @@
 <!--pages/data/data.wxml-->
-<import src="/template/tabbar" />
+<!-- <import src="/template/tabbar" /> -->
 <view class="usr-bg"></view>
 <view class="usr-avatar">
   <image src="/images/portrait.png"></image>
@@ -87,4 +87,4 @@
     </view>
   </view>
 </view>
-<template is="tabbar" data="{{tabbarActiveIndex}}"></template>
+<!-- <template is="tabbar" data="{{tabbarActiveIndex}}"></template> -->

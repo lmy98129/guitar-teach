@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<import src="/template/tabbar" />
+<!-- <import src="/template/tabbar" /> -->
 <view class="top-widget">
   <view class="search-bar">
     <image src="/images/search.png"></image>
@@ -43,4 +43,4 @@
   </block>
   <view class="msg-list-bottom"></view>
 </view>
-<template is="tabbar" data="{{tabbarActiveIndex}}"></template>
+<!-- <template is="tabbar" data="{{tabbarActiveIndex}}"></template> -->
