@@ -6,7 +6,8 @@
     "pages/friends/friends",
     "pages/data/data",
     "pages/upload/upload",
-    "pages/class/class"
+    "pages/class/class",
+    "pages/send/send"
   ],
   "window": {
     "backgroundTextStyle": "light",

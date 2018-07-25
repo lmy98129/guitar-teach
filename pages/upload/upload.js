@@ -209,8 +209,41 @@ Page({
   },
 
   bindBack() {
-    wx.navigateBack({
-      delta: 2
+    wx.showModal({
+      title: '提示',
+      content: '确定放弃编辑？',
+      confirmText: '是',
+      confirmColor: 'red',
+      cancelText: '否',
+      cancelColor: 'black',
+      success: (res) => {
+        if (res.confirm) {
+          keyArrayEnc = [];
+          this.setData({
+            keyArray: []
+          })
+          wx.navigateBack({
+            delta: 2
+          });
+        }
+      },
     });
+  }, 
+
+  bindSend() {
+    if (keyArrayEnc.length <= 0) {
+      wx.showModal({
+        title: '提示',
+        content: '乐谱长度为0',
+        showCancel: false,
+        confirmText: '好的'
+      });
+      return;
+    }
+    wx.setStorageSync("keyArrayCur", keyArrayEnc);
+    wx.setStorageSync("keyArrayShow", this.data.keyArray);
+    wx.navigateTo({
+      url: '../send/send',
+    })
   }
 })

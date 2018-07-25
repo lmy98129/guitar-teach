@@ -3,7 +3,7 @@
   <view class="btn back new" bindtap="bindBack">
     <image src="/images/back.png"></image>
   </view>
-  <view class="btn second">
+  <view class="btn second" bindtap="bindSend">
     <image src="/images/save.png"></image>
   </view>
   <view class="page-title">

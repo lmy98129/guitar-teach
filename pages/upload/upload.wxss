@@ -80,7 +80,7 @@ page {
   padding-top: 6rpx;
 }
 
- .input-wrapper {
+.input-wrapper {
   top: 20rpx;
   max-height: 100%;
   position: relative;
@@ -91,7 +91,7 @@ page {
   margin-right: 0;
 }
 
- .key-wrapper {
+.key-wrapper {
   width: 16%;
   font-size: 40rpx;
   text-align: center;
@@ -100,21 +100,21 @@ page {
   flex-direction: row;
 }
 
- .key-wrapper .tune {
+.key-wrapper .tune {
   font-size: 30rpx;
   line-height: 50%;
 }
 
- .key-wrapper .key.high:before {
-    content: '.';
-    position: relative;
-    top: -35rpx;
-    left: 16rpx;
+.key-wrapper .key.high:before {
+  content: '.';
+  position: relative;
+  top: -35rpx;
+  left: 16rpx;
 }
 
- .key-wrapper .key.low:after {
-    content: '.';
-    position: relative;
-    top: 20rpx;
-    left: -16rpx;
+.key-wrapper .key.low:after {
+  content: '.';
+  position: relative;
+  top: 20rpx;
+  left: -16rpx;
 }
