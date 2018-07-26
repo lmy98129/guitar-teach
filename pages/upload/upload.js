@@ -18,14 +18,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setStorageSync("isSaved", false);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -209,32 +209,39 @@ Page({
   },
 
   bindBack() {
-    wx.showModal({
-      title: '提示',
-      content: '确定放弃编辑？',
-      confirmText: '是',
-      confirmColor: 'red',
-      cancelText: '否',
-      cancelColor: 'black',
-      success: (res) => {
-        if (res.confirm) {
-          keyArrayEnc = [];
-          this.setData({
-            keyArray: []
-          })
-          wx.navigateBack({
-            delta: 2
-          });
-        }
-      },
-    });
+    if (wx.getStorageSync("isSaved") == false){
+      wx.showModal({
+        title: '提示',
+        content: '确定放弃编辑？',
+        confirmText: '是',
+        confirmColor: 'red',
+        cancelText: '否',
+        cancelColor: 'black',
+        success: (res) => {
+          if (res.confirm) {
+            keyArrayEnc = [];
+            this.setData({
+              keyArray: []
+            })
+            wx.navigateBack({
+              delta: 2
+            });
+          }
+        },
+      });
+    } else {
+      wx.setStorageSync("isSaved", false);
+      wx.navigateBack({
+        delta: 2
+      });
+    }
   }, 
 
   bindSend() {
     if (keyArrayEnc.length <= 0) {
       wx.showModal({
         title: '提示',
-        content: '乐谱长度为0',
+        content: '乐谱长度为0，请输入乐谱内容后再保存',
         showCancel: false,
         confirmText: '好的'
       });

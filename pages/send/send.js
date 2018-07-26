@@ -79,8 +79,40 @@ Page({
   
   },
 
+  listenTitleInput(e) {
+    this.setData({
+      title: e.detail.value
+    })
+  },
+
   bindSave() {
-    
+    if (this.data.title == "" || this.data.title == null || this.data.title == undefined) {
+      wx.showModal({
+        title: '提示',
+        content: '乐谱标题为空',
+        showCancel: false,
+        confirmText: '好的'
+      });
+      return;
+    }
+    console.log('a=upload&title=' + this.data.title + '&length=' + keyArrayCur.length + '&content=' + keyArrayStr + 'uploader_id=' + 1);
+    wx.request({
+      url: 'https://sguitar.mybeike.com/api/score.php',
+      method: 'POST',
+      data: 'a=upload&title='+this.data.title+'&length='+keyArrayCur.length+'&content='+keyArrayStr+'&uploader_id='+1,
+      header: {
+        //设置参数内容类型为x-www-form-urlencoded
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      },
+      success: res => {
+        console.log("success:", res);
+        wx.showToast({
+          title: '上传成功',
+        })
+        wx.setStorageSync("isSaved", true);
+      }
+    })
   },
 
   bindBack() {
