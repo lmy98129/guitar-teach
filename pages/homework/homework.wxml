@@ -1,0 +1,31 @@
+<!--pages/homework/homework.wxml-->
+<view class="top-widget">
+  <image class="top-bg" src="../../images/top-bg-big.png"></image>
+  <view class="btn back new" bindtap="bindBack">
+    <image src="/images/back-white.png"></image>
+  </view>
+  <view class="page-title">
+    {{name}}的作业
+  </view>
+</view>
+<view class="avatar-wrap">
+  <image class="avatar" src="/images/portrait.png"></image>
+</view>
+<view class="func-wrap">
+  <view class="func">
+    <image class="pic" src="/images/date.png"></image>
+    <view class="name">整体情况</view>
+  </view>
+  <view class="func">
+    <image class="pic" src="/images/user.png"></image>
+    <view class="name">速度情况</view>
+  </view>
+  <view class="func">
+    <image class="pic" src="/images/date.png"></image>
+    <view class="name">音准情况</view>
+  </view>
+  <view class="func">
+    <image class="pic" src="/images/user.png"></image>
+    <view class="name">乐谱对比</view>
+  </view>
+</view>

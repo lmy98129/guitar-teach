@@ -1,2 +1,110 @@
 <!--pages/class/class.wxml-->
-<text>pages/class/class.wxml</text>
+<view class="top-widget">
+  <image class="top-bg" src="../../images/top-bg.png"></image>
+  <view class="page-title">
+    作业管理
+  </view>
+</view>
+<view class="msg-list-top"></view>
+<view class="root">
+  <view class="class-header">
+    <image class="pic" src="../../images/portrait.png"></image>
+    <view class="info">
+      <view class="title">北科大吉他班第3期</view>
+      <view class="content">
+        <view class="teach">讲师：张佳铂</view>
+        <view class="time">时间：2018.1-2018.9</view>
+      </view>
+    </view>
+    <view class="last-time">进行了4个月</view>
+  </view>
+  <view class="hw-wrap">
+    <view class="hw">
+      <view class="title">作业一： 单音弹奏</view>
+      <image class="arrow" src="../../images/back.png"></image>
+    </view>
+    <view class="hw">
+      <view class="title">作业二： 和弦弹奏</view>
+      <image class="arrow" src="../../images/back.png"></image>
+    </view>
+    <view class="hw up">
+      <view class="title">作业三： 曲目弹奏（小星星）</view>
+      <image class="arrow up" src="../../images/back.png"></image>
+    </view>
+    <view class="detail">
+      <view class="score-wrap">
+        <view class="graph"></view>
+        <text class="summary" decode="true">
+          均分：85.5分 \n
+          优秀率：88.3% \n
+          不及格率：2% \n
+        </text>
+      </view>
+      <view class="stu-wrap">
+        <view class="exc-wrap">
+          <view class="sum">优秀（85以上） 6人</view>
+          <view class="list">
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png" bindtap="getDetail" data-name="PT"></image>
+              <view class="name" bindtap="getDetail" data-name="PT">PT</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">ZHENG</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">z666</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">123</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">mr.zhang</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">abc</view>
+            </view>
+          </view>
+        </view>
+        <view class="exc-wrap">
+          <view class="sum">良好（70-85分） 3人</view>
+          <view class="list">
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">哎</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">名字</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">真难想</view>
+            </view>
+          </view>
+        </view>
+        <view class="exc-wrap">
+          <view class="sum">及格（60-70分） 3人</view>
+          <view class="list">
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">哎</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">名字</view>
+            </view>
+            <view class="stu">
+              <image class="avatar" src="../../images/portrait.png"></image>
+              <view class="name">真难想</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

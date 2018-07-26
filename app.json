@@ -7,7 +7,8 @@
     "pages/data/data",
     "pages/upload/upload",
     "pages/class/class",
-    "pages/send/send"
+    "pages/send/send",
+    "pages/homework/homework"
   ],
   "window": {
     "backgroundTextStyle": "light",

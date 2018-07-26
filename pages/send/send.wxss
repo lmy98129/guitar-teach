@@ -14,11 +14,10 @@
   height:110rpx;
   line-height:110rpx;
   box-sizing:border-box;
-  color:#fff;
-  background-color:rgba(100, 100, 100, 1.0);
+  color:#000;
+  background-color:#fff;
   position:relative;
   font-size:36rpx;
-  padding-left:40rpx;
   margin-top:20rpx;
   width:92%;
   margin-left:auto;
