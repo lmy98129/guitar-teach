@@ -8,7 +8,8 @@
     "pages/upload/upload",
     "pages/class/class",
     "pages/send/send",
-    "pages/homework/homework"
+    "pages/homework/homework",
+    "pages/scoreprev/scoreprev"
   ],
   "window": {
     "backgroundTextStyle": "light",

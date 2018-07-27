@@ -14,12 +14,12 @@
 <view class="root">
   <view class="msg-list-top"></view>
   <view class="comp-list-wrap">
-    <block wx:for="{{compList}}" wx:key="{{index}}">
-      <view class="comp-list-item">
-        <view class="title">
-          {{item}}
+    <block wx:for="{{scoreList}}" wx:key="{{index}}">
+      <view class="comp-list-item" data-index="{{index}}" bindtap="getPrev">
+        <view class="title" data-index="{{index}}" bindtap="getPrev">
+          {{item.title}}
         </view>
-        <view class="arrow">
+        <view class="arrow" data-index="{{index}}" bindtap="getPrev">
           >
         </view>
       </view>

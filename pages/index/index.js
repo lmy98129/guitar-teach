@@ -1,6 +1,4 @@
 //index.js
-//获取应用实例
-const app = getApp()
 const tabbar = require("../../template/tabbar");
 
 Page({
@@ -11,11 +9,6 @@ Page({
     msgContent: []
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
     // if (app.globalData.userInfo) {
     //   this.setData({
@@ -50,15 +43,6 @@ Page({
     while(i--) { arr[i]=0; }
     this.setData({
       msgContent: arr
-    })
-  },
-
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
   },
 

@@ -40,8 +40,8 @@ Page({
     keyArrayCur.forEach((value, index) => {
       keyArrayStr = keyArrayStr + value;
     });
-    console.log(keyArrayStr);
-    console.log(keyArrayCur.length);
+    // console.log(keyArrayStr);
+    // console.log(keyArrayCur.length);
   },
 
   /**

@@ -182,7 +182,7 @@ Page({
           newKeyStr = newKeyStr + "3";
           break;
         case "Chord":
-          newKeyStr = newKeyStr + "4";
+          // 暂时忽略和弦
           break;
       }
       keyArrayEnc.push(newKeyStr);
@@ -204,8 +204,8 @@ Page({
       keyArray: newKeyArray,
       scrollTop: 80 * newKeyArray.length
     });
-    console.log(this.data.keyArray);
-    console.log(keyArrayEnc);
+    // console.log(this.data.keyArray);
+    // console.log(keyArrayEnc);
   },
 
   bindBack() {

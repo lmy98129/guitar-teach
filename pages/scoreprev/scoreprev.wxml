@@ -1,0 +1,21 @@
+<!--pages/scoreprev/scoreprev.wxml-->
+<view class="top-widget">
+  <view class="btn back new" bindtap="bindBack">
+    <image src="/images/back.png"></image>
+  </view>
+  <view class="page-title">
+    {{title}}
+  </view>
+</view>
+<view class="msg-list-top"></view>
+<view class="root">
+  <image src="/images/bg.jpeg" class="upload-bg"></image>
+    <scroll-view scroll-y="true" scroll-x="false" style="height: 60%;" scroll-top="{{scrollTop}}">
+      <view class="input-wrapper">
+          <view class="key-wrapper" wx:for="{{keyArray}}" wx:key="{{index}}">
+            <text class="tune" decode="true">{{item.tune}}</text>
+            <text class="key {{item.style == 'High'?'high':''}} {{item.style == 'Low'?'low':''}}" decode="true">{{item.key}}</text>
+          </view>
+      </view>
+    </scroll-view>
+</view>

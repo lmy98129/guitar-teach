@@ -1,0 +1,3 @@
+/* pages/scoreprev/scoreprev.wxss */
+@import "../index/index.wxss";
+@import "../send/send.wxss";
