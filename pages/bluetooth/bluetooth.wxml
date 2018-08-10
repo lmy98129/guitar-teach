@@ -1,0 +1,10 @@
+<!--pages/bluetooth/bluetooth.wxml-->
+<view class="top-widget">
+  <view class="btn back new" bindtap="bindBack">
+    <image src="/images/back.png"></image>
+  </view>
+  <view class="page-title">
+    {{title}}
+  </view>
+</view>
+<view class="msg-list-top"></view>

@@ -1,46 +1,55 @@
 <!--index.wxml-->
 <!-- <import src="/template/tabbar" /> -->
 <view class="top-widget">
+  <image class="top-bg" src="../../images/top-bg.png"></image>
   <view class="search-bar">
-    <image src="/images/search.png"></image>
     <view class="tip">
-      搜索作品、发布者
+      搜索
     </view>
-  </view>
-  <view class="btn message">
-    <image src="/images/message.png"></image>
+    <image src="/images/search.png"></image>
   </view>
 </view>
 <view class="root">
   <view class="msg-list-top"></view>
-  <block wx:for="{{msgContent}}" wx:key="{{index}}">
-    <view class="msg-list-video">
-      <view class="video-img" bindtap="bindVideoCover">
-        <image class="cover-img" src="/images/img-video.png"></image>
-        <image class="play-btn" src="/images/play.png"></image>
-      </view>
-      <view class="info-wrap">
-        <view class="upper">
-          <view class="user-info">
-            <view class="avatar">
-              <image src="/images/portrait.png"></image>
-            </view>
-            <view class="nickname">
-              xx老师
-            </view>
-          </view>
-          <view class="date">
-            2018/07/03
-          </view>
-        </view>
-        <view class="down">
-          <view class="title">
-            《十年》
-          </view>
-        </view>
-      </view>
+  <swiper autoplay="true" class="swiper" circular="true">
+    <swiper-item>
+      <image src="/images/banner1.png" class="swiper-item"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner2.png" class="swiper-item"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/banner3.png" class="swiper-item"></image>
+    </swiper-item>
+  </swiper>
+  <view class="func-wrap">
+  <view class="func">
+    <image class="pic" src="/images/date-hl.png"></image>
+    <view class="name name-hl">每日推荐</view>
+  </view>
+  <view class="func">
+    <image class="pic" src="/images/user.png"></image>
+    <view class="name">我的关注</view>
+  </view>
+  <view class="func">
+    <image class="pic" src="/images/date.png"></image>
+    <view class="name">视频微课</view>
+  </view>
+  <view class="func">
+    <image class="pic" src="/images/user.png"></image>
+    <view class="name">易音分享</view>
+  </view>
+</view>
+<view class="refresh-state">下滑刷新</view>
+<view class="msg-list-wrap">
+  <block wx:for="{{msgArray}}" wx:index="{{index}}">
+    <view class="title-wrap">
+      <view class="title">{{item.title}}</view>
+      <view class="author">来自{{item.author}}</view>
     </view>
+    <view class="content">{{item.content}}</view>
   </block>
-  <view class="msg-list-bottom"></view>
+</view>
+<view class="msg-list-bottom">已经到最底啦~</view>
 </view>
 <!-- <template is="tabbar" data="{{tabbarActiveIndex}}"></template> -->

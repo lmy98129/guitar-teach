@@ -9,7 +9,9 @@
     "pages/class/class",
     "pages/send/send",
     "pages/homework/homework",
-    "pages/scoreprev/scoreprev"
+    "pages/scoreprev/scoreprev",
+    "pages/bluetooth/bluetooth",
+    "pages/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,22 +31,22 @@
         "selectedIconPath": "images/homepage-hl.png"
       },
       {
-        "pagePath": "pages/write/write",
-        "text": "写谱",
-        "iconPath": "images/write.png",
-        "selectedIconPath": "images/write-hl.png"
-      },
-      {
         "pagePath": "pages/class/class",
         "text": "课堂",
         "iconPath": "images/class.png",
         "selectedIconPath": "images/class-hl.png"
       },
       {
-        "pagePath": "pages/friends/friends",
-        "text": "学生",
-        "iconPath": "images/friends.png",
-        "selectedIconPath": "images/friends-hl.png"
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/message.png",
+        "selectedIconPath": "images/message-hl.png"
+      },
+      {
+        "pagePath": "pages/write/write",
+        "text": "写谱",
+        "iconPath": "images/write.png",
+        "selectedIconPath": "images/write-hl.png"
       },
       {
         "pagePath": "pages/data/data",

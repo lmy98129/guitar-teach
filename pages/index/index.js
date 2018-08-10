@@ -1,12 +1,30 @@
 //index.js
 const tabbar = require("../../template/tabbar");
 
+var recomArray = [
+  {
+    "title": "吉他初学者必看",
+    "author": "易音科技小易",
+    "content": "音悦智能教学辅助设备采用PCB板、FPC板以及无毒无害的电路 板印刷工艺，保证人体健康；其表面涂有环保漆，不容易被人手的汗液"
+  },
+  {
+    "title": "学吉他难坚持怎么办？",
+    "author": "吉他红人张佳铂",
+    "content": "音悦智能教学辅助设备采用PCB板、FPC板以及无毒无害的电路 板印刷工艺，保证人体健康；其表面涂有环保漆，不容易被人手的汗液"
+  },
+  {
+    "title": "10首今年最火吉他谱",
+    "author": "我的老师",
+    "content": "音悦智能教学辅助设备采用PCB板、FPC板以及无毒无害的电路 板印刷工艺，保证人体健康；其表面涂有环保漆，不容易被人手的汗液"
+  },
+];
+
 Page({
   data: {
     isIpx: false,
     isIp4: false,
     tabbarActiveIndex: 0,
-    msgContent: []
+    msgArray: []
   },
   //事件处理函数
   onLoad: function () {
@@ -38,12 +56,13 @@ Page({
     // }
   },
   onShow() {
-    // wx.hideTabBar();
-    var arr = new Array(10), i = arr.length;
-    while(i--) { arr[i]=0; }
     this.setData({
-      msgContent: arr
+      msgArray: recomArray
     })
+    // wx.hideTabBar();
+    // wx.navigateTo({
+    //   url: '../bluetooth/bluetooth',
+    // })
   },
 
   tabbarRouteTeach(e) {
@@ -52,5 +71,11 @@ Page({
 
   bindVideoCover() {
     
+  },
+
+  goBluetooth() {
+    wx.navigateTo({
+      url: '../bluetooth/bluetooth',
+    })
   }
 })

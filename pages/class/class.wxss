@@ -6,15 +6,6 @@
   overflow-x: hidden;
 }
 
-.top-bg {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 100;
-  height: 140rpx;
-}
-
 .page-title {
   color: #fff;
   z-index: 120;
