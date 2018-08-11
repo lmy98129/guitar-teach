@@ -182,3 +182,7 @@
   font-weight: lighter;
   text-align: center;
 }
+
+.msg-list-top {
+  height: 150rpx;
+}

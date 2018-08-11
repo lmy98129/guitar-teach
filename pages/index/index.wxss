@@ -91,13 +91,7 @@
 }
 
 .msg-list-bottom {
-  height: 200rpx;
-  font-size: 30rpx;
-  width: 100%;
-  text-align: center;
-  color: #bbb;
-  margin-top: 30rpx;
-  font-weight: lighter;
+  height: 15rpx;
 }
 
 .top-bg {
@@ -149,7 +143,7 @@
 }
 
 .search-bar image {
-  width: 35rpx;
+  width: 34rpx;
   height: 40rpx;
 }
 
@@ -180,25 +174,25 @@
 }
 
 .swiper {
-  height: 450rpx;
+  height: 460rpx;
 }
 
 .swiper-item {
   width: 100%;
-  height: 450rpx
+  height: 460rpx
 }
 
 .func-wrap {
   display: flex;
+  position: absolute;
   flex-direction: row;
   align-content: space-around;
   align-items: center;
-  margin-top: -180rpx;
+  top: 420rpx;
   overflow: hidden;
   height: 144rpx;
   background: rgba(255, 255, 255, .8);
   z-index: 80;
-  position: relative;
   width: 100%;
   padding-bottom: 40rpx;
 }
@@ -208,6 +202,19 @@
   flex-direction: column;
   align-items: center;
   width: 25%;
+}
+
+.func-wrap .func .name.on {
+  color: #fd9941
+}
+
+.func-wrap .func.on:after {
+  content: '';
+  width: 100%;
+  height: 5rpx;
+  background-color: #fd9941;
+  position: relative;
+  top: 30rpx;
 }
 
 .func .pic {
@@ -241,24 +248,20 @@
   background-color: #fff;
 }
 
-.msg-list-wrap {
-  background-color: #fff;
-}
-
-.msg-list-wrap .title-wrap {
+.msg .title-wrap {
   padding-top: 30rpx;
   display: flex;
   flex-direction: row;
   padding-bottom: 15rpx;
 }
 
-.msg-list-wrap .title {
+.title-wrap .title {
   font-size: 35rpx;
   color: rgb(51, 51, 51);
   margin-left: 40rpx;
 }
 
-.msg-list-wrap .author {
+.title-wrap .author {
   line-height: 50rpx;
   font-size: 30rpx;
   color: #bbb;
@@ -266,7 +269,7 @@
   font-weight: lighter;
 }
 
-.msg-list-wrap .content {
+.msg .content {
   font-size: 30rpx;
   margin-left: 40rpx;
   margin-right: 40rpx;

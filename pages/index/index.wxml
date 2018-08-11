@@ -23,33 +23,45 @@
     </swiper-item>
   </swiper>
   <view class="func-wrap">
-  <view class="func">
-    <image class="pic" src="/images/date-hl.png"></image>
-    <view class="name name-hl">每日推荐</view>
+  <view class="func {{currentTab == 0?'on':''}}" bindtap="bindTab" data-index="0">
+    <image class="pic" src="/images/date{{currentTab == 0?'-hl.png':'.png'}}"></image>
+    <view class="name {{currentTab == 0?'on':''}}">每日推荐</view>
   </view>
-  <view class="func">
-    <image class="pic" src="/images/user.png"></image>
-    <view class="name">我的关注</view>
+  <view class="func {{currentTab == 1?'on':''}}" bindtap="bindTab" data-index="1">
+    <image class="pic" src="/images/like{{currentTab == 1?'-hl.png':'.png'}}"></image>
+    <view class="name {{currentTab == 1?'on':''}}">我的关注</view>
   </view>
-  <view class="func">
-    <image class="pic" src="/images/date.png"></image>
-    <view class="name">视频微课</view>
+  <view class="func {{currentTab == 2?'on':''}}" bindtap="bindTab" data-index="2">
+    <image class="pic" src="/images/vcourse{{currentTab == 2?'-hl.png':'.png'}}"></image>
+    <view class="name {{currentTab == 2?'on':''}}">视频微课</view>
   </view>
-  <view class="func">
-    <image class="pic" src="/images/user.png"></image>
-    <view class="name">易音分享</view>
+  <view class="func {{currentTab == 3?'on':''}}" bindtap="bindTab" data-index="3">
+    <image class="pic" src="/images/bbs{{currentTab == 3?'-hl.png':'.png'}}"></image>
+    <view class="name {{currentTab == 3?'on':''}}">易音分享</view>
   </view>
 </view>
-<view class="refresh-state">下滑刷新</view>
+<view class="refresh-state" bindtap="refresh">点击刷新</view>
 <view class="msg-list-wrap">
-  <block wx:for="{{msgArray}}" wx:index="{{index}}">
-    <view class="title-wrap">
-      <view class="title">{{item.title}}</view>
-      <view class="author">来自{{item.author}}</view>
-    </view>
-    <view class="content">{{item.content}}</view>
-  </block>
+  <swiper current="{{currentTab}}" class="msg-list-swiper" duration="500" bindchange="bindSwiper" style="height:{{winHeight-155}}px">
+    <swiper-item>
+      <scroll-view scroll-y="true" style="height:{{winHeight-155}}px">
+        <block wx:for="{{msgArray}}" wx:key="{{index}}">
+          <view class="msg">
+            <view class="title-wrap">
+              <view class="title">{{item.title}}</view>
+              <view class="author">来自{{item.author}}</view>
+            </view>
+            <view class="content">{{item.content}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+
+    </swiper-item>
+  </swiper>
+
 </view>
-<view class="msg-list-bottom">已经到最底啦~</view>
+<view class="msg-list-bottom"></view>
 </view>
 <!-- <template is="tabbar" data="{{tabbarActiveIndex}}"></template> -->
