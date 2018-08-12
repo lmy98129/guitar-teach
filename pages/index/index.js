@@ -42,7 +42,8 @@ Page({
     currentTab: 0,
     msgArray: [],
     winHeight: 0,
-    scrollHeight: 0
+    scrollHeight: 0,
+    shouldFixed: false
   },
   //事件处理函数
   onLoad: function () {
@@ -85,7 +86,7 @@ Page({
     let length = recomArray.length
     this.setData({
       msgArray: recomArray,
-      scrollHeight: length*480
+      scrollHeight: length*250
     })
     // wx.hideTabBar();
     // wx.navigateTo({
@@ -115,7 +116,7 @@ Page({
       let length = arr.length
       this.setData({
         currentTab: e.currentTarget.dataset.index,
-        scrollHeight: length*300
+        scrollHeight: length * 250
       });
     }
   },
@@ -130,6 +131,19 @@ Page({
     wx.showToast({
       title: '刷新成功',
     })
+  },
+
+  onPageScroll(e) {
+    if (e.scrollTop >= 120) {
+      this.setData({
+        shouldFixed: true
+      });
+    } else {
+      this.setData({
+        shouldFixed: false
+      })
+    }
   }
+
 
 })

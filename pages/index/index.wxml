@@ -22,7 +22,7 @@
       <image src="/images/banner3.png" class="swiper-item"></image>
     </swiper-item>
   </swiper>
-  <view class="func-wrap">
+  <view class="func-wrap {{shouldFixed?'fixed':''}}">
   <view class="func {{currentTab == 0?'on':''}}" bindtap="bindTab" data-index="0">
     <image class="pic" src="/images/date{{currentTab == 0?'-hl.png':'.png'}}"></image>
     <view class="name {{currentTab == 0?'on':''}}">每日推荐</view>
@@ -42,19 +42,17 @@
 </view>
 <view class="refresh-state" bindtap="refresh">点击刷新</view>
 <view class="msg-list-wrap">
-  <swiper current="{{currentTab}}" class="msg-list-swiper" duration="500" bindchange="bindSwiper" style="height:{{winHeight-155}}px">
+  <swiper current="{{currentTab}}" class="msg-list-swiper" duration="500" bindchange="bindSwiper" style="height:{{scrollHeight}}rpx">
     <swiper-item>
-      <scroll-view scroll-y="true" style="height:{{winHeight-155}}px">
-        <block wx:for="{{msgArray}}" wx:key="{{index}}">
-          <view class="msg">
-            <view class="title-wrap">
-              <view class="title">{{item.title}}</view>
-              <view class="author">来自{{item.author}}</view>
-            </view>
-            <view class="content">{{item.content}}</view>
+      <block wx:for="{{msgArray}}" wx:key="{{index}}">
+        <view class="msg">
+          <view class="title-wrap">
+            <view class="title">{{item.title}}</view>
+            <view class="author">来自{{item.author}}</view>
           </view>
-        </block>
-      </scroll-view>
+          <view class="content">{{item.content}}</view>
+        </view>
+      </block>
     </swiper-item>
     <swiper-item>
 

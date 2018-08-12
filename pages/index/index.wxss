@@ -197,6 +197,12 @@
   padding-bottom: 40rpx;
 }
 
+.func-wrap.fixed {
+  position: fixed;
+  top: 140rpx;
+  background: #fff;
+}
+
 .func-wrap .func {
   display: flex;
   flex-direction: column;
