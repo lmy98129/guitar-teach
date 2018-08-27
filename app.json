@@ -43,7 +43,7 @@
         "selectedIconPath": "images/message-hl.png"
       },
       {
-        "pagePath": "pages/write/write",
+        "pagePath": "pages/bluetooth/bluetooth",
         "text": "写谱",
         "iconPath": "images/write.png",
         "selectedIconPath": "images/write-hl.png"

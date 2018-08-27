@@ -55,7 +55,15 @@
       </block>
     </swiper-item>
     <swiper-item>
-
+      <block wx:for="{{msgArray}}" wx:key="{{index}}">
+        <view class="msg">
+          <view class="title-wrap">
+            <view class="title">{{item.title}}</view>
+            <view class="author">来自{{item.author}}</view>
+          </view>
+          <view class="content">{{item.content}}</view>
+        </view>
+      </block>
     </swiper-item>
   </swiper>
 

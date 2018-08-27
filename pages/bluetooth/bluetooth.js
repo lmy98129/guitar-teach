@@ -1,11 +1,14 @@
 // pages/bluetooth/bluetooth.js
+const util = require('../../utils/util')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title: "蓝牙测试"
+    title: "蓝牙测试",
+    isDeviceGot: "设备扫描中"
   },
 
   /**
@@ -42,17 +45,70 @@ Page({
             allowDuplicatesKey: true,
             success: res => {
               console.log(res);
-              wx.onBluetoothDeviceFound(res => {
-                console.log(res);
-              })
-              wx.onBluetoothAdapterStateChange(res => {
-                console.log(res);
-              })
+              // wx.onBluetoothDeviceFound(res => {
+              //   console.log(res);
+              // })
               setTimeout(() => {
-                setInterval(() => {
+                var t1 = setInterval(() => {
                     wx.getBluetoothDevices({
                       success: res => {
                         console.log(res);
+                        let devices = res.devices,
+                          targetDevice;
+                        for (let i=0; i<devices.length; i++) {
+                          if (devices[i].name === "Smart_guitar") {
+                            this.setData({
+                              isDeviceGot: "已搜索到设备"
+                            });
+                            clearInterval(t1);
+                            console.log("target device Found");
+                            targetDevice = devices[i];
+                            break;
+                          }
+                        }
+                        if (targetDevice != undefined) {
+                          let targetDeviceId = targetDevice.deviceId;
+                          wx.stopBluetoothDevicesDiscovery({
+                            success: res => {
+                              wx.createBLEConnection({
+                                deviceId: targetDeviceId,
+                                success: res => {
+                                  wx.getBLEDeviceServices({
+                                    deviceId: targetDeviceId,
+                                    success: res => {
+                                      console.log(res);
+                                      let services = res.services;
+                                      for (let i=0; i<services.length; i++) {
+                                        let currentServiceId = services[i].uuid;
+                                        wx.getBLEDeviceCharacteristics({
+                                          deviceId: targetDeviceId,
+                                          serviceId: currentServiceId,
+                                          success: function(res) {
+                                            console.log(res);
+                                            wx.onBLECharacteristicValueChange(function (res) {
+                                              console.log(res);
+                                              console.log('characteristic value comed:', util.ab2hex(res.value));
+                                            })
+                                            if (res.characteristics[0].uuid == "00002A00-0000-1000-8000-00805F9B34FB") {
+                                              wx.readBLECharacteristicValue({
+                                                deviceId: targetDeviceId,
+                                                serviceId: currentServiceId,
+                                                characteristicId: "00002A00-0000-1000-8000-00805F9B34FB",
+                                                success: function(res) {
+                                                  console.log(res);
+                                                },
+                                              })
+                                            }
+                                          },
+                                        })
+                                      }
+                                    },
+                                  })
+                                },
+                              })
+                            },
+                          })
+                        }
                       },
                     })
                 }, 3000)
