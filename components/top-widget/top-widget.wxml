@@ -1,0 +1,21 @@
+<!-- 
+    component: top-widget
+    tag: tpw-
+ -->
+<view class="tpw-root">
+    <image class="tpw-bg" src="../../images/top-bg.png"></image>
+
+    <!-- search-bar -->
+    <view wx:if="{{searchBar}}" class="tpw-search-bar">
+      <view class="tip">
+        搜索
+      </view>
+      <image src="/images/search.png"></image>
+    </view>
+
+    <!-- title-left -->
+    <view wx:if="{{title && titlePos == 'left'}}" class="tpw-title-left">
+      {{title}}
+    </view>
+
+</view>

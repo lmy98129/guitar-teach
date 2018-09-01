@@ -1,5 +1,5 @@
 <!--pages/friends/friends.wxml-->
-<!-- <import src="/template/tabbar" /> -->
+<!-- <import src="/template/tabbar/tabbar" /> -->
 <view class="top-widget">
   <view class="btn add-stu new">
     <image src="/images/add-student.png"></image>

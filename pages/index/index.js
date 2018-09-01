@@ -1,5 +1,5 @@
 //index.js
-const tabbar = require("../../template/tabbar");
+const tabbar = require("../../template/tabbar/tabbar");
 
 var recomArray = [
   {

@@ -1,5 +1,5 @@
 /* pages/write/write.wxss */
-@import "/template/tabbar.wxss";
+@import "/template/tabbar/tabbar.wxss";
 @import "/pages/index/index.wxss";
 
 .top-widget .btn.search image{

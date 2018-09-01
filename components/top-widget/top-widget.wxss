@@ -1,0 +1,62 @@
+/* component/top-widget/top-widget.wxss */
+
+/* root */
+.tpw-root {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  padding-top: 60rpx;
+  padding-bottom: 15rpx;
+  background-color: transparent!important;
+  z-index: 100;
+}
+
+/* background */
+.tpw-bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  height: 150rpx;
+}
+
+/* search-bar */
+.tpw-search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 40rpx;
+  width: 50%;
+  background-color: rgba(255, 255, 255, .9);
+  padding-left: 25rpx;
+  padding-right: 30rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  border-radius: 40rpx;
+  z-index: 120;
+}
+
+.tpw-search-bar image {
+  width: 34rpx;
+  height: 40rpx;
+}
+
+.tpw-search-bar .tip {
+  font-size: 32rpx;
+  margin-left: 10rpx;
+  color: #666;
+  font-weight: lighter
+}
+
+/* title-left */
+.tpw-title-left {
+  color: #fff;
+  z-index: 120;
+  margin-left: 40rpx!important;
+  font-size: 40rpx!important;
+  font-weight: lighter;
+}

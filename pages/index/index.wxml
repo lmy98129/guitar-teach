@@ -1,14 +1,6 @@
 <!--index.wxml-->
-<!-- <import src="/template/tabbar" /> -->
-<view class="top-widget">
-  <image class="top-bg" src="../../images/top-bg.png"></image>
-  <view class="search-bar">
-    <view class="tip">
-      搜索
-    </view>
-    <image src="/images/search.png"></image>
-  </view>
-</view>
+<!-- <import src="/template/tabbar/tabbar" /> -->
+<top-widget searchBar="{{true}}" />
 <view class="root">
   <view class="msg-list-top"></view>
   <swiper autoplay="true" class="swiper" circular="true">

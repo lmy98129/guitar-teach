@@ -1,5 +1,5 @@
 /* pages/complete/complete.wxss */
-@import "/template/tabbar.wxss";
+@import "/template/tabbar/tabbar.wxss";
 @import "/pages/index/index.wxss";
 
 .msg-list-wrap {

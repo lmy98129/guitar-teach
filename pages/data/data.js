@@ -1,5 +1,5 @@
 // pages/data/data.js
-const tabbar = require("../../template/tabbar");
+const tabbar = require("../../template/tabbar/tabbar");
 
 Page({
 

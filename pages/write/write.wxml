@@ -1,5 +1,5 @@
 <!--pages/write/write.wxml-->
-<!-- <import src="/template/tabbar" /> -->
+<!-- <import src="/template/tabbar/tabbar" /> -->
 <view class="top-widget">
   <view class="btn new" bindtap="bindUpload">
     <image src="/images/record.png"></image>

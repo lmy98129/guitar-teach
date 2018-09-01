@@ -1,5 +1,5 @@
 <!--pages/data/data.wxml-->
-<!-- <import src="/template/tabbar" /> -->
+<!-- <import src="/template/tabbar/tabbar" /> -->
 <view class="usr-bg"></view>
 <view class="usr-avatar">
   <image src="/images/portrait.png"></image>

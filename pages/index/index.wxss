@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import "/template/tabbar.wxss";
+@import "/template/tabbar/tabbar.wxss";
 
 .msg-list-video {
   background-color: #fff;

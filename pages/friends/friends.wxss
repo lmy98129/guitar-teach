@@ -1,5 +1,5 @@
 /* pages/friends/friends.wxss */
-@import "/template/tabbar.wxss";
+@import "/template/tabbar/tabbar.wxss";
 @import "../index/index.wxss";
 
 .top-widget .btn.msg image {

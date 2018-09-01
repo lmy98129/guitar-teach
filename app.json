@@ -37,7 +37,7 @@
         "selectedIconPath": "images/class-hl.png"
       },
       {
-        "pagePath": "pages/message/message",
+        "pagePath": "pages/write/write",
         "text": "消息",
         "iconPath": "images/message.png",
         "selectedIconPath": "images/message-hl.png"

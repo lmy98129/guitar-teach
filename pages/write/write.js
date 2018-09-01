@@ -1,5 +1,5 @@
 // pages/write/write.js
-const tabbar = require("../../template/tabbar");
+const tabbar = require("../../template/tabbar/tabbar");
 var resArray = [];
 
 Page({

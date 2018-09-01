@@ -1,5 +1,5 @@
 /* pages/data/data.wxss */
-@import "/template/tabbar.wxss";
+@import "/template/tabbar/tabbar.wxss";
 
 page {
   overflow: hidden;
