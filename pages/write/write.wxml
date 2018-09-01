@@ -1,6 +1,6 @@
 <!--pages/write/write.wxml-->
 <!-- <import src="/template/tabbar/tabbar" /> -->
-<view class="top-widget">
+<!-- <view class="top-widget">
   <view class="btn new" bindtap="bindUpload">
     <image src="/images/record.png"></image>
   </view>
@@ -10,7 +10,8 @@
   <view class="page-title">
     我的乐谱
   </view>
-</view>
+</view> -->
+<top-widget searchBar="{{true}}"/>
 <view class="root">
   <view class="msg-list-top"></view>
   <view class="comp-list-wrap">
@@ -27,4 +28,5 @@
   </view>
   <view class="msg-list-bottom"></view>
 </view>
+<add-button />
 <!-- <template is="tabbar" data="{{tabbarActiveIndex}}"></template> -->

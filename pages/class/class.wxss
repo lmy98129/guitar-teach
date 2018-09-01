@@ -6,18 +6,6 @@
   overflow-x: hidden;
 }
 
-.page-title {
-  color: #fff;
-  z-index: 120;
-  margin-left: 40rpx!important;
-  font-size: 40rpx!important;
-  font-weight: lighter;
-}
-
-.top-widget {
-  background-color: transparent!important;
-}
-
 .class-header {
   position: relative;
   display: flex;

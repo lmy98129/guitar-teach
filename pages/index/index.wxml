@@ -29,7 +29,7 @@
   </view>
   <view class="func {{currentTab == 3?'on':''}}" bindtap="bindTab" data-index="3">
     <image class="pic" src="/images/bbs{{currentTab == 3?'-hl.png':'.png'}}"></image>
-    <view class="name {{currentTab == 3?'on':''}}">易音分享</view>
+    <view class="name {{currentTab == 3?'on':''}}">易音动态</view>
   </view>
 </view>
 <view class="refresh-state" bindtap="refresh">点击刷新</view>

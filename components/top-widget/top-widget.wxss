@@ -60,3 +60,12 @@
   font-size: 40rpx!important;
   font-weight: lighter;
 }
+
+/* title-center */
+.tpw-title-center {
+  color: #fff;
+  z-index: 120;
+  margin: 0 auto;
+  font-weight: lighter;
+  font-size: 40rpx!important;
+}

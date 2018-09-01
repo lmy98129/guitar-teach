@@ -14,7 +14,12 @@
     </view>
 
     <!-- title-left -->
-    <view wx:if="{{title && titlePos == 'left'}}" class="tpw-title-left">
+    <view wx:if="{{title != '' && titlePos == 'left'}}" class="tpw-title-left">
+      {{title}}
+    </view>
+
+    <!-- title-center -->
+    <view wx:if="{{title != '' && titlePos == 'center'}}" class="tpw-title-center">
       {{title}}
     </view>
 
