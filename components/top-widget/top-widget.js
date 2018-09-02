@@ -1,6 +1,13 @@
 // component/top-widget/top-widget.js
 Component({
   /**
+   * 组件的设置
+   */
+  options: {
+    multipleSlots: true
+  },
+
+  /**
    * 组件的属性列表
    */
   properties: {
@@ -12,10 +19,6 @@ Component({
       type: String,
       value: ''
     },
-    titlePos: {
-      type: String,
-      value: ''
-    }
   },
 
   /**
@@ -24,7 +27,7 @@ Component({
   data: {
     searchBar: false,
     title: '',
-    titlePos: ''
+    hasAddBtn: false,
   },
 
   /**
@@ -36,8 +39,7 @@ Component({
       this.setData({
         searchBar: prop.searchBar,
         title: prop.title,
-        titlePos: prop.titlePos
       })
-    }
+    },
   }
 })

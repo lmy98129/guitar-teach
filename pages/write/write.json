@@ -1,6 +1,6 @@
 {
   "usingComponents": {
     "top-widget": "/components/top-widget/top-widget",
-    "add-button": "/components/add-button/add-button"
+    "add-btn": "/components/add-btn/add-btn"
   }
 }

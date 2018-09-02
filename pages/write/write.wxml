@@ -11,7 +11,9 @@
     我的乐谱
   </view>
 </view> -->
-<top-widget searchBar="{{true}}"/>
+<top-widget searchBar="{{true}}">
+  <add-btn slot="add-btn" url="../upload/upload"/>
+</top-widget>
 <view class="root">
   <view class="msg-list-top"></view>
   <view class="comp-list-wrap">
@@ -28,5 +30,4 @@
   </view>
   <view class="msg-list-bottom"></view>
 </view>
-<add-button />
 <!-- <template is="tabbar" data="{{tabbarActiveIndex}}"></template> -->

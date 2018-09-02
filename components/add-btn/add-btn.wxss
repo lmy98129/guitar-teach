@@ -1,0 +1,40 @@
+/* components/add-btn/add-btn.wxss */
+:host {
+  z-index: 120
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 574679 */
+  src: url('//at.alicdn.com/t/font_574679_db2kw6d3lrb.eot');
+  src: url('//at.alicdn.com/t/font_574679_db2kw6d3lrb.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_574679_db2kw6d3lrb.woff') format('woff'),
+  url('//at.alicdn.com/t/font_574679_db2kw6d3lrb.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_574679_db2kw6d3lrb.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-msnui-refresh-line:before { content: "\e649"; }
+
+.icon-plus:before { content: "\e636"; }
+
+.icon-fanhui:before { content: "\e602"; }
+
+.icon-icon:before { content: "\e67a"; }
+
+.icon-guanbi:before { content: "\e600"; }
+
+.add-btn {
+  z-index: 120;
+  color: #fff;
+  font-size: 80rpx;
+  font-weight: lighter;
+  line-height: 75rpx;
+  margin-left: 0rpx;
+}
