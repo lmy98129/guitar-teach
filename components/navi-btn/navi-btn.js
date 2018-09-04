@@ -1,4 +1,4 @@
-// components/add-btn/add-btn.js
+
 Component({
   /**
    * 组件的属性列表
@@ -7,6 +7,10 @@ Component({
     url: {
       type: String,
       value: '',
+    },
+    btnStyle: {
+      type: String,
+      value: ''
     }
   },
 
@@ -14,7 +18,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    url: ''
+    url: '',
+    btnStyle: ''
   },
 
   /**
@@ -25,12 +30,17 @@ Component({
     attach: () => {
       let props = this.properties;
       this.setData({
-        url: props.url
+        url: props.url,
+        btnStyle: props.btnStyle
       });
     },
-    
+
+    ready: () => {
+
+    },
+
     // NOTE: 这里不能使用箭头函数，否则无法获取this对象
-    addBtnNav() {
+    btnNav() {
       wx.navigateTo({
         url: this.data.url,
       })

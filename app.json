@@ -5,7 +5,7 @@
     "pages/write/write",
     "pages/friends/friends",
     "pages/data/data",
-    "pages/upload/upload",
+    "pages/keyboard/keyboard",
     "pages/class/class",
     "pages/send/send",
     "pages/homework/homework",
@@ -37,13 +37,13 @@
         "selectedIconPath": "images/class-hl.png"
       },
       {
-        "pagePath": "pages/write/write",
+        "pagePath": "pages/bluetooth/bluetooth",
         "text": "消息",
         "iconPath": "images/message.png",
         "selectedIconPath": "images/message-hl.png"
       },
       {
-        "pagePath": "pages/bluetooth/bluetooth",
+        "pagePath": "pages/write/write",
         "text": "写谱",
         "iconPath": "images/write.png",
         "selectedIconPath": "images/write-hl.png"

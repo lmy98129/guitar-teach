@@ -31,7 +31,7 @@
 }
 
 .comp-list-item .arrow {
-  position: fixed;
+  position: absolute;
   right: 100rpx;
   color: #aaa;
 }

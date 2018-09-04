@@ -197,10 +197,26 @@
   padding-bottom: 40rpx;
 }
 
+.func-wrap.ipx {
+  top: 470rpx;
+}
+
+.func-wrap.ip5 {
+  top: 430rpx;
+}
+
 .func-wrap.fixed {
   position: fixed;
   top: 140rpx;
   background: #fff;
+}
+
+.func-wrap.ipx.fixed {
+  top: 190rpx;
+}
+
+.func-wrap.ip5.fixed {
+  top: 150rpx;
 }
 
 .func-wrap .func {

@@ -2,7 +2,6 @@
 <!-- <import src="/template/tabbar/tabbar" /> -->
 <top-widget searchBar="{{true}}" />
 <view class="root">
-  <view class="msg-list-top"></view>
   <swiper autoplay="true" class="swiper" circular="true">
     <swiper-item>
       <image src="/images/banner1.png" class="swiper-item"></image>
@@ -14,7 +13,7 @@
       <image src="/images/banner3.png" class="swiper-item"></image>
     </swiper-item>
   </swiper>
-  <view class="func-wrap {{shouldFixed?'fixed':''}}">
+  <view class="func-wrap {{shouldFixed?'fixed':''}} {{isIpx?'ipx':''}} {{isIp5?'ip5':''}}">
   <view class="func {{currentTab == 0?'on':''}}" bindtap="bindTab" data-index="0">
     <image class="pic" src="/images/date{{currentTab == 0?'-hl.png':'.png'}}"></image>
     <view class="name {{currentTab == 0?'on':''}}">每日推荐</view>

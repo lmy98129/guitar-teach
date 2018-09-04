@@ -1,6 +1,5 @@
 <!--pages/class/class.wxml-->
-<top-widget title="作业管理" titlePos="left" />
-<view class="msg-list-top"></view>
+<top-widget title="作业管理" />
 <view class="root">
   <view class="class-header">
     <image class="pic" src="../../images/portrait.png"></image>

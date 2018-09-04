@@ -11,11 +11,12 @@
     我的乐谱
   </view>
 </view> -->
-<top-widget searchBar="{{true}}">
-  <add-btn slot="add-btn" url="../upload/upload"/>
+<top-widget search-bar="true">
+  <!-- <navi-btn slot="back-btn" url="../keyboard/keyboard" btn-style="back-btn"/> -->
+  <navi-btn slot="add-btn" url="../keyboard/keyboard" btn-style="add-btn"/>
+  <!-- <add-btn slot="navi-btn" url="../keyboard/keyboard" /> -->
 </top-widget>
 <view class="root">
-  <view class="msg-list-top"></view>
   <view class="comp-list-wrap">
     <block wx:for="{{scoreList}}" wx:key="{{index}}">
       <view class="comp-list-item" data-index="{{index}}" bindtap="getPrev">

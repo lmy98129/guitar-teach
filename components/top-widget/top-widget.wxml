@@ -2,29 +2,38 @@
     component: top-widget
     tag: tpw-
  -->
-<view class="tpw-root">
+<view class="tpw-root {{topBar == 'ip6' ? 'ip6' : topBar == 'ip5' ? 'ip5' : topBar == 'ipx' ? 'ipx' : topBar == 'ip6p' ? 'ip6p' : ''}}">
   <!-- background image -->
-  <image class="tpw-bg" src="../../images/top-bg.png"></image>
+  <image class="tpw-bg {{topBar == 'ip6' ? 'ip6' : topBar == 'ip5' ? 'ip5' : topBar == 'ipx' ? 'ipx' : topBar == 'ip6p' ? 'ip6p' : ''}}" src="../../images/top-bg.png"></image>
 
   <!-- widget-wrapper -->
   <view class="tpw-wrapper">
 
-    <!-- add-button -->
-    <slot name="add-btn"></slot>
-
-    <!-- search-bar -->
-    <view wx:if="{{searchBar}}" class="tpw-search-bar {{hasAddBtn ? 'has-add' : ''}}">
-      <view class="tip">
-        搜索
+    <view class="tpw-left-wrapper">
+      <!-- back-button -->
+      <slot name="back-btn"></slot>
+      <!-- add-button -->
+      <slot name="add-btn"></slot>
+      <!-- title -->
+      <view wx:if="{{title != ''}}" class="tpw-title">
+        {{title}}
       </view>
-      <image src="/images/search.png"></image>
+      <!-- search-bar -->
+      <view wx:if="{{searchBar}}" class="tpw-search-bar">
+        <view class="tip">
+          搜索
+        </view>
+        <image src="/images/search.png"></image>
+      </view>
     </view>
 
-    <!-- title -->
-    <view wx:if="{{title != ''}}" class="tpw-title">
-      {{title}}
+    <view class="tpw-right-wrapper">
+      <!-- navigation-button -->
+      <slot name="navi-btn"></slot>
     </view>
-
   </view>
 
 </view>
+
+<!-- height-holder -->
+<view class="tpw-holder {{topBar == 'ip6' ? 'ip6' : topBar == 'ip5' ? 'ip5' : topBar == 'ipx' ? 'ipx' : topBar == 'ip6p' ? 'ip6p' : ''}}"></view>

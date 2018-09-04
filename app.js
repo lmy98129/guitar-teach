@@ -1,6 +1,26 @@
 //app.js
 App({
+  data: {
+    isIpx: false,
+    isIp5: false,
+  },
+
   onLaunch: function () {
+    let self = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        switch(res.model) {
+          case "iPhone X":
+            self.data.isIpx = true;
+            break;
+          case "iPhone 5":
+          case "iPhone 5s":
+          case "iPhone 5c":
+            self.data.isIp5 = true;
+            break;
+        }
+      },
+    })
     // wx.hideTabBar();
 
     // 登录

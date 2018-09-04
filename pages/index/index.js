@@ -36,8 +36,8 @@ var recomArray = [
 
 Page({
   data: {
-    isIpx: false,
-    isIp4: false,
+    isIpx: getApp().data.isIpx,
+    isIp5: getApp().data.isIp5,
     tabbarActiveIndex: 0,
     currentTab: 0,
     msgArray: [],

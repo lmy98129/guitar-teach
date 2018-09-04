@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -44,7 +44,19 @@
 				{
 					"id": -1,
 					"name": "我的乐谱",
-					"pathName": "pages/write/write"
+					"pathName": "pages/write/write",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "乐谱键盘",
+					"pathName": "pages/upload/upload",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "乐谱键盘",
+					"pathName": "pages/keyboard/keyboard"
 				}
 			]
 		}

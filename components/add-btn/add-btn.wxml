@@ -1,3 +1,0 @@
-<!--components/add-btn/add-btn.wxml-->
-  <view class="add-btn iconfont icon-plus" bindtap="addBtnNav">
-  </view>

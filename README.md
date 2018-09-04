@@ -8,3 +8,4 @@ A wechat mini-program for a guitar teaching device.
 - [ ] build utility js libraries
 - [ ] new UI style
 - [ ] detailed annotations
+- [ ] delete cursor for score editing page
