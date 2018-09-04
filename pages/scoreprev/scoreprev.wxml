@@ -1,13 +1,15 @@
 <!--pages/scoreprev/scoreprev.wxml-->
-<view class="top-widget">
+<!-- <view class="top-widget">
   <view class="btn back new" bindtap="bindBack">
     <image src="/images/back.png"></image>
   </view>
   <view class="page-title">
     {{title}}
   </view>
-</view>
-<view class="msg-list-top"></view>
+</view> -->
+<top-widget title="{{title}}">
+  <navi-btn slot="back-btn" btn-style="back-btn" bind:tapbtn="bindBack" insert="true"/>
+</top-widget>
 <view class="root">
   <image src="/images/bg.jpeg" class="upload-bg"></image>
     <scroll-view scroll-y="true" scroll-x="false" style="height: 60%;" scroll-top="{{scrollTop}}">

@@ -1,15 +1,8 @@
 <!--pages/upload/upload.wxml-->
-<view class="top-widget">
-  <view class="btn back new" bindtap="bindBack">
-    <image src="/images/back.png"></image>
-  </view>
-  <view class="btn second" bindtap="bindSend">
-    <image src="/images/save.png"></image>
-  </view>
-  <view class="page-title">
-    乐谱录制
-  </view>
-</view>
+<top-widget title="乐谱录制">
+  <navi-btn slot="back-btn" btn-style="back-btn" bind:tapbtn="bindBack" insert="true"/>
+  <navi-btn slot="navi-btn" btn-style="save-btn" bind:tapbtn="bindSend" insert="true"/>
+</top-widget>
 <view class="msg-list-top"></view>
 <view class="root">
   <image src="/images/bg.jpeg" class="upload-bg"></image>

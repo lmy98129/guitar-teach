@@ -30,8 +30,8 @@ Component({
     topBar: '',
   },
   
-  // NOTE: 生命周期函数必须写在最外层，否则无法调用控制台以及修改data
-  attached: function () {
+  // NOTE: 生命周期函数必须写在最外层，而且也不能用箭头函数，否则无法调用控制台、读取properties以及修改data
+  attached: function() {
     let prop = this.properties;
     this.setData({
       searchBar: prop.searchBar,
