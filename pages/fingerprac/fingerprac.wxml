@@ -4,7 +4,7 @@
 </top-widget>
 <view class="root">
   <image src="/images/bg.png" class="upload-bg" style="filter:blur(40px);"></image>
-    <scroll-view scroll-y="true" scroll-x="false" style="height: 80%;" scroll-top="{{scrollTop}}">
+    <scroll-view scroll-y="true" scroll-x="false" style="height: 70%;" scroll-top="{{scrollTop}}">
     <view class="input-wrapper">
       <view class="key-wrapper" wx:for="{{keyArray}}" wx:key="{{index}}" bindtap="setCursor" data-index='{{index}}'>
         <!-- <text class="tune" decode="true">{{item.tune}}</text> -->
@@ -39,6 +39,6 @@
     <view class="item" bindtap="goBluetooth">蓝牙连接</view>
     <view class="item" bindtap="lastScore">上一音符</view>
     <view class="item" bindtap="nextScore">下一音符</view>
-    <view class="item">发送</view>   
+    <view class="item" bindtap="emitScore">发送</view>   
   </view>
 </view>

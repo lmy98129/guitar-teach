@@ -9,7 +9,8 @@ Page({
    */
   data: {
     keyArray: [],
-    cursorPos: 0
+    cursorPos: 0,
+    scrollTop: 0
   },
 
   /**
@@ -77,6 +78,12 @@ Page({
         cursorPos: 0
       })
     } else {
+      // if (this.data.cursorPos % 30 == 0 && this.data.cursorPos !== 0) {
+      //   this.setData({
+      //     scrollTop: this.data.scrollTop - 5 * 100
+      //   })
+      // }
+      // 这个滚动条跟随光标的算法实在诡异，不知道如何是好。。。
       this.setData({
         cursorPos: this.data.cursorPos - 1
       })
@@ -84,13 +91,18 @@ Page({
   },
 
   nextScore() {
-    if (this.data.cursorPos >= keyArrayEnc.length) {
+    if (this.data.cursorPos >= keyArrayEnc.length - 1) {
       this.setData({
         cursorPos: keyArrayEnc.length - 1
       })
     } else {
+      if (this.data.cursorPos % 30 == 0 && this.data.cursorPos !== 0) {
+        this.setData({
+          scrollTop: this.data.scrollTop + 5 * 100
+        })
+      }
       this.setData({
-        cursorPos: this.data.cursorPos + 1
+        cursorPos: this.data.cursorPos + 1,
       })
     }
   },
@@ -100,6 +112,11 @@ Page({
     this.setData({
       cursorPos: index
     })
+  },
+
+  emitScore() {
+    let message = "@TS"+keyArrayEnc[this.data.cursorPos]+"#";
+    console.log(message);
   },
 
   bindBack() {

@@ -68,7 +68,7 @@ const inputKey = (keyArrayEnc, self, e) => {
           return;
         } else {
           // 处理编码
-          newKeyStr = newKeyStr + (5 - keyNum).toString();
+          newKeyStr = newKeyStr + "0" + (5 - keyNum).toString();
         }
     }
 

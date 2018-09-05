@@ -54,6 +54,7 @@ page {
   margin-top: 50rpx;
   display: flex;
   flex-direction: row;
+  margin-bottom: 10rpx;
 }
 
 .key-wrapper .tune {

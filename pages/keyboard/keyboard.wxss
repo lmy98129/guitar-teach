@@ -57,7 +57,6 @@ page {
 }
 
 .keyboard-left {
-  height: 100%;
   background: rgba(65, 65, 65, 0.8);
   border-right: .5rpx solid rgb(160, 160, 160);
   display: flex;

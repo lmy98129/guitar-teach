@@ -1,5 +1,9 @@
 /* pages/fingerprac/fingerprac.wxss */
 
+.root {
+  height: 80%;
+}
+
 .key-wrapper {
   color: #fff;
 }
@@ -41,6 +45,7 @@
   font-weight: bold;
   position: relative;
   top: -10rpx;
+  margin-bottom: 10rpx;
 }
 
 .cur-score {
