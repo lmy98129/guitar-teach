@@ -44,7 +44,7 @@
       },
       {
         "pagePath": "pages/write/write",
-        "text": "写谱",
+        "text": "创作",
         "iconPath": "images/write.png",
         "selectedIconPath": "images/write-hl.png"
       },

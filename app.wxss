@@ -43,3 +43,70 @@ page {
 .icon-icon:before { content: "\e67a"; }
 
 .icon-guanbi:before { content: "\e600"; }
+
+/* score-display */
+.key-wrapper {
+  width: 16%;
+  font-size: 40rpx;
+  text-align: center;
+  margin-top: 70rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.key-wrapper .tune {
+  font-size: 30rpx;
+  line-height: 50%;
+}
+
+.key-wrapper .key.high:before {
+  content: '.';
+  position: relative;
+  top: -35rpx;
+  left: 16rpx;
+}
+
+.key-wrapper .key.low:after {
+  content: '.';
+  position: relative;
+  top: 20rpx;
+  left: -16rpx;
+}
+
+.key-wrapper .key.with-two {
+  border-bottom: 1rpx solid #000;
+}
+
+.key-wrapper .key.low.with-two:after {
+  content: '.';
+  position: relative;
+  top: 35rpx;
+  left: -16rpx;
+}
+
+.key-wrapper .key.with-four {
+  border-bottom: 8rpx double #000;
+}
+
+.key-wrapper .key.low.with-four:after {
+  content: '.';
+  position: relative;
+  top: 40rpx;
+  left: -16rpx;
+}
+
+.key-wrapper .key.with-eight:after {
+  content: '≡';
+  position: relative;
+  top: 30rpx;
+  right: 25rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.key-wrapper .key.low.with-eight:before {
+  content: '.';
+  position: relative;
+  top: 40rpx;
+  left: 25rpx;
+}

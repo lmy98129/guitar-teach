@@ -221,7 +221,7 @@ Page({
     } else if (e.target.dataset.key == "space") {
       // 输入空格
       newKey.key = "&nbsp;";
-      newKey.time = "1/8";
+      newKey.time = this.data.scoreTime;
       newKeyStr = "001";
       keyArrayEnc.push(newKeyStr);
       newKeyArray.push(newKey);   

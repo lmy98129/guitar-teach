@@ -8,8 +8,8 @@
   <scroll-view scroll-y="true" scroll-x="false" style="height: 50%;" scroll-top="{{scrollTop}}">
     <view class="input-wrapper">
       <view class="key-wrapper" wx:for="{{keyArray}}" wx:key="{{index}}">
-        <text class="tune" decode="true">{{item.tune}}</text>
-        <text class="key {{item.style == 'High'?'high':''}} {{item.style == 'Low'?'low':''}}" decode="true">{{item.key}}</text>
+        <!-- <text class="tune" decode="true">{{item.tune}}</text> -->
+        <text class="key {{item.style == 'High'?'high':''}} {{item.style == 'Low'?'low':''}} {{item.time == '1/8' ? 'with-eight': item.time == '1/4' ? 'with-four':item.time == '1/2' ? 'with-two': ''}} " decode="true">{{item.key}}</text>
       </view>
     </view>
   </scroll-view>

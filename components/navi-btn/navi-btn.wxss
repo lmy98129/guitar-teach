@@ -6,7 +6,7 @@
   color: #fff;
   font-size: 80rpx;
   font-weight: lighter;
-  line-height: 75rpx;
+  line-height: 70rpx;
   margin-left: 0rpx;
 }
 

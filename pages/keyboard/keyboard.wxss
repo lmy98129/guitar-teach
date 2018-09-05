@@ -3,7 +3,7 @@
 @import "../../app.wxss";
 
 .root {
-  height: 80%;
+  height: 85%;
 }
 .upload-bg {
   width: 100%;
@@ -20,7 +20,7 @@ page {
 
 .keyboard-wrapper {
   bottom: 0;
-  height: 42%;
+  height: auto;
   width: 100%;
   position: absolute;
   display: flex;
@@ -132,30 +132,4 @@ page {
   margin-right: 0;
 }
 
-.key-wrapper {
-  width: 16%;
-  font-size: 40rpx;
-  text-align: center;
-  margin-top: 50rpx;
-  display: flex;
-  flex-direction: row;
-}
 
-.key-wrapper .tune {
-  font-size: 30rpx;
-  line-height: 50%;
-}
-
-.key-wrapper .key.high:before {
-  content: '.';
-  position: relative;
-  top: -35rpx;
-  left: 16rpx;
-}
-
-.key-wrapper .key.low:after {
-  content: '.';
-  position: relative;
-  top: 20rpx;
-  left: -16rpx;
-}
