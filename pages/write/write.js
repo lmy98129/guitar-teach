@@ -1,7 +1,6 @@
 // pages/write/write.js
 const tabbar = require("../../template/tabbar/tabbar");
-var resArray = [];
-
+const req = require("../../utils/req.js");
 Page({
 
   /**
@@ -34,29 +33,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.request({
-      url: 'https://sguitar.mybeike.com/api/score.php',
-      method: 'POST',
-      data: 'a=searchByUploaderId&uploader_id='+1,
-      header: {
-        //设置参数内容类型为x-www-form-urlencoded
-        'content-type': 'application/x-www-form-urlencoded',
-        'Accept': 'application/json'
-      },
-      success: res => {
-        console.log(res);
-        resArray = [];
-        resArray = res.data
-        resArray.sort((a, b) => a.title.localeCompare(b.title, 'zh-Hans-CN', { sensitivity: 'accent' }));
-        this.setData({
-          scoreList: resArray
-        });
-        wx.setStorageSync("scoreList", resArray);
-      },
-      fail: res => {
-        console.log(res);
-      }
-    });
+    req.getScoreList(1, this);
   },
 
 
@@ -107,6 +84,42 @@ Page({
   bindUpload() {
     wx.navigateTo({
       url: '../upload/upload',
+    })
+  },
+
+  bindSetting(e) {
+    let self = this;
+    wx.showActionSheet({
+      itemList: ['查看乐谱', '编辑乐谱', '删除乐谱'],
+      itemColor: '#44b2b8',
+      success: function (res) {
+        switch(res.tapIndex) {
+          case 0 :
+            self.getPrev(e);
+            break;
+          case 1:
+            wx.navigateTo({
+              url: '../keyboard/keyboard?index='+e.target.dataset.index,
+            })
+            break;
+          case 2: 
+            wx.showModal({
+              title: '提示',
+              content: '确定删除该乐谱？',
+              showCancel: true,
+              cancelText: '否',
+              cancelColor: '',
+              confirmText: '是',
+              confirmColor: '#FF3B30',
+              success: function (res) {
+                if (res.confirm) {
+                  req.delScoreList(e, 1, self);
+                }
+              },
+            })
+            break;
+        }
+      },
     })
   }
 })

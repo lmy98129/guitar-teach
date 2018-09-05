@@ -28,3 +28,13 @@
   margin-left: -15rpx;
   margin-right: -20rpx;
 }
+
+.setting-btn {
+  z-index: 120;
+  color: #fff;
+  font-size: 45rpx;
+  font-weight: lighter;
+  line-height: 76rpx;
+  margin-left: 0rpx;
+  margin-right: 10rpx;
+}

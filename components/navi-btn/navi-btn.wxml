@@ -1,3 +1,3 @@
 <!--components/navi-btn/navi-btn.wxml-->
-<view class="{{btnStyle == 'add-btn' ? 'add-btn icon-plus' : btnStyle == 'save-btn' ? 'save-btn icon-baocun' : btnStyle == 'back-btn' ? 'back-btn icon-fanhui1': ''}} iconfont " bindtap="btnNav">
+<view class="{{btnStyle == 'add-btn' ? 'add-btn icon-plus' : btnStyle == 'save-btn' ? 'save-btn icon-baocun' : btnStyle == 'back-btn' ? 'back-btn icon-fanhui1': 'setting-btn' ? 'setting-btn icon-icon':''}} iconfont " bindtap="btnNav" style="{{customStyle}}">
 </view>

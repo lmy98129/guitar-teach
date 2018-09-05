@@ -12,12 +12,22 @@
 </top-widget>
 <view class="root">
   <image src="/images/bg.jpeg" class="upload-bg"></image>
-    <scroll-view scroll-y="true" scroll-x="false" style="height: 60%;" scroll-top="{{scrollTop}}">
-      <view class="input-wrapper">
-          <view class="key-wrapper" wx:for="{{keyArray}}" wx:key="{{index}}">
-            <text class="tune" decode="true">{{item.tune}}</text>
-            <text class="key {{item.style == 'High'?'high':''}} {{item.style == 'Low'?'low':''}}" decode="true">{{item.key}}</text>
+  <scroll-view scroll-y="true" scroll-x="false" style="height: 100%;" scroll-top="{{scrollTop}}">
+    <view class="input-wrapper">
+      <view class="key-wrapper" wx:for="{{keyArray}}" wx:key="{{index}}" data-index='{{index}}'>
+        <!-- <text class="tune" decode="true">{{item.tune}}</text> -->
+        <view class="key" data-index='{{index}}'>
+          <view class="high" wx:if="{{item.style == 'High'}}" data-index='{{index}}'>.</view>
+          <view class="content" data-index='{{index}}'>{{item.key}}</view>
+          <view class="time" wx:if="{{item.time != '1'}}" data-index='{{index}}'>
+            <block wx:if="{{item.time == '1/2'}}">-</block>
+            <block wx:if="{{item.time == '1/4'}}">=</block>
+            <block wx:if="{{item.time == '1/8'}}">≡</block>          
           </view>
+          <view class="low {{item.time != '1'?'with-time':''}}" wx:if="{{item.style == 'Low'}}" data-index='{{index}}'>.</view>
+        </view>
+        <text class="cursor" wx:if="{{index == cursorPos}}">|</text>
       </view>
-    </scroll-view>
+    </view>
+  </scroll-view>
 </view>

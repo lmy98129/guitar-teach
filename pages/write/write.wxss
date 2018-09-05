@@ -16,8 +16,8 @@
 }
 
 .comp-list-item {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   background-color:#fff;
   border-bottom: 1rpx solid #bbb;
   font-size: 40rpx;
@@ -38,13 +38,33 @@
   font-weight: lighter;  
 }
 
-.comp-list-item .arrow {
+.comp-list-item .right-wrap {
   position: absolute;
   right: 60rpx;
+  display: flex;
+  flex-direction: row;
 }
 
 .arrow-icon {
   transform:rotate(180deg);
   font-size: 50rpx;
-  color: #999;  
+  color: #999;
+  display: relative;
+  right: 10rpx;
+}
+
+.comp-list-item .cover {
+  position: relative;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  margin-right: 100rpx; 
+  z-index: 200;
+}
+
+.comp-list-item .covered {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 90%;
 }

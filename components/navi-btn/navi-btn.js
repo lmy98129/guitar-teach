@@ -15,6 +15,10 @@ Component({
     insert: {
       type: Boolean,
       value: false
+    },
+    customStyle: {
+      type: String,
+      value: "#fff"
     }
   },
 
@@ -23,16 +27,12 @@ Component({
    */
   data: {
     url: '',
-    btnStyle: ''
+    btnStyle: '',
+    customStyle: ''
   },
 
   // NOTE: attach不能调用控制台，attached可以
   attached: function() {
-    let props = this.properties;
-    this.setData({
-      url: props.url,
-      btnStyle: props.btnStyle
-    });
   },
 
   /**
@@ -46,7 +46,7 @@ Component({
         this.triggerEvent("tapbtn");
       } else {
         wx.navigateTo({
-          url: this.data.url,
+          url: props.url,
         })
       }
     },

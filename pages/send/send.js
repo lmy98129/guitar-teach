@@ -1,8 +1,11 @@
 // pages/send/send.js
+const req = require("../../utils/req");
+
 var keyArrayCur = [];
 var keyArrayStr = "";
 // 上传者ID先写死
-var uploaderId = 1;
+var uploader = 1;
+var id, isEdit = false;
 
 Page({
 
@@ -18,7 +21,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if (options.isEdit != undefined) {
+      this.setData({
+        title: options.title
+      })
+      id = options.id;
+      isEdit = options.isEdit;
+    }
   },
 
   /**
@@ -55,7 +64,10 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    keyArrayCur = [];
+    keyArrayStr = "";
+    isEdit = false;
+    id = null;
   },
 
   /**
@@ -95,24 +107,12 @@ Page({
       });
       return;
     }
-    console.log('a=upload&title=' + this.data.title + '&length=' + keyArrayCur.length + '&content=' + keyArrayStr + 'uploader_id=' + 1);
-    wx.request({
-      url: 'https://sguitar.mybeike.com/api/score.php',
-      method: 'POST',
-      data: 'a=upload&title='+this.data.title+'&length='+keyArrayCur.length+'&content='+keyArrayStr+'&uploader_id='+1,
-      header: {
-        //设置参数内容类型为x-www-form-urlencoded
-        'content-type': 'application/x-www-form-urlencoded',
-        'Accept': 'application/json'
-      },
-      success: res => {
-        console.log("success:", res);
-        wx.showToast({
-          title: '上传成功',
-        })
-        wx.setStorageSync("isSaved", true);
-      }
-    })
+    console.log("isEdit", isEdit);
+    if (isEdit) {
+      req.updateScore(uploader, id, keyArrayCur.length, keyArrayStr, this);
+    } else {
+      req.uploadScore(uploader, keyArrayCur.length, keyArrayStr, this);
+    }
   },
 
   bindBack() {
