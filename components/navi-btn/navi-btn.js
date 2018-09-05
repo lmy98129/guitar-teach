@@ -29,7 +29,6 @@ Component({
   // NOTE: attach不能调用控制台，attached可以
   attached: function() {
     let props = this.properties;
-    console.log(props);
     this.setData({
       url: props.url,
       btnStyle: props.btnStyle

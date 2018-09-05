@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -56,7 +56,13 @@
 				{
 					"id": -1,
 					"name": "乐谱键盘",
-					"pathName": "pages/keyboard/keyboard"
+					"pathName": "pages/keyboard/keyboard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "保存乐谱",
+					"pathName": "pages/send/send"
 				}
 			]
 		}

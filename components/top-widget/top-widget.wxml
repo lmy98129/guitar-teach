@@ -27,7 +27,7 @@
       </view>
     </view>
 
-    <view class="tpw-right-wrapper">
+    <view class="tpw-right-wrapper {{topBar == 'ip6p' ? 'ip6p' : topBar == 'ip5' ? 'ip5' : ''}}">
       <!-- navigation-button -->
       <slot name="navi-btn"></slot>
     </view>

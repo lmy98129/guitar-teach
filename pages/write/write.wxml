@@ -1,30 +1,16 @@
-<!--pages/write/write.wxml-->
-<!-- <import src="/template/tabbar/tabbar" /> -->
-<!-- <view class="top-widget">
-  <view class="btn new" bindtap="bindUpload">
-    <image src="/images/record.png"></image>
-  </view>
-  <view class="btn search">
-    <image src="/images/search.png"></image>
-  </view> 
-  <view class="page-title">
-    我的乐谱
-  </view>
-</view> -->
 <top-widget search-bar="true">
-  <!-- <navi-btn slot="back-btn" url="../keyboard/keyboard" btn-style="back-btn"/> -->
   <navi-btn slot="add-btn" url="../keyboard/keyboard" btn-style="add-btn"/>
-  <!-- <add-btn slot="navi-btn" url="../keyboard/keyboard" /> -->
 </top-widget>
 <view class="root">
   <view class="comp-list-wrap">
     <block wx:for="{{scoreList}}" wx:key="{{index}}">
       <view class="comp-list-item" data-index="{{index}}" bindtap="getPrev">
-        <view class="title" data-index="{{index}}" bindtap="getPrev">
+        <view class="title" data-index="{{index}}">
           {{item.title}}
         </view>
-        <view class="arrow" data-index="{{index}}" bindtap="getPrev">
-          >
+        <view class="arrow" data-index="{{index}}">
+          <!--  -->
+          <view class="arrow-icon icon-fanhui1 iconfont" data-index="{{index}}"></view>
         </view>
       </view>
     </block>

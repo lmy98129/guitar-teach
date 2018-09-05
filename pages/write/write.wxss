@@ -1,6 +1,7 @@
 /* pages/write/write.wxss */
 @import "/template/tabbar/tabbar.wxss";
 @import "/pages/index/index.wxss";
+@import "/app.wxss";
 
 .top-widget .btn.search image{
   position: fixed;
@@ -10,15 +11,20 @@
   padding-top: 6rpx;
 }
 
+.comp-list-wrap {
+  background: #fff;
+}
+
 .comp-list-item {
-  width:100%;
   display:flex;
   flex-direction:row;
   background-color:#fff;
-  border-bottom: .5rpx solid #666;
+  border-bottom: 1rpx solid #bbb;
   font-size: 40rpx;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
 }
 
 .comp-list-item:first-child {
@@ -27,11 +33,18 @@
 
 .comp-list-item .title {
   position: relative;
-  left: 60rpx;
+  left: 10rpx;
+  font-size: 37rpx;
+  font-weight: lighter;  
 }
 
 .comp-list-item .arrow {
   position: absolute;
-  right: 100rpx;
-  color: #aaa;
+  right: 60rpx;
+}
+
+.arrow-icon {
+  transform:rotate(180deg);
+  font-size: 50rpx;
+  color: #999;  
 }

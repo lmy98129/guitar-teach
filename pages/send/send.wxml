@@ -1,12 +1,6 @@
-<view class="top-widget">
-  <view class="btn back new" bindtap="bindBack">
-    <image src="/images/back.png"></image>
-  </view>
-  <view class="page-title">
-    保存乐谱
-  </view>
-</view>
-<view class="msg-list-top"></view>
+<top-widget title="保存乐谱">
+  <navi-btn slot="back-btn" btn-style="back-btn" bind:tapbtn="bindBack" insert="true"/>
+</top-widget>
 <view class="root">
   <image src="/images/bg.jpeg" class="upload-bg"></image>
   <input placeholder="请输入乐谱标题" class="title-input" placeholder-class="title-input-ph" bindinput="listenTitleInput"></input>

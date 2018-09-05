@@ -173,6 +173,10 @@
   padding-top: 10rpx;
 }
 
+.swiper-wrapper {
+  position: relative;
+}
+
 .swiper {
   height: 460rpx;
 }
@@ -188,21 +192,13 @@
   flex-direction: row;
   align-content: space-around;
   align-items: center;
-  top: 420rpx;
+  bottom: 0;
   overflow: hidden;
   height: 144rpx;
   background: rgba(255, 255, 255, .8);
   z-index: 80;
   width: 100%;
   padding-bottom: 40rpx;
-}
-
-.func-wrap.ipx {
-  top: 470rpx;
-}
-
-.func-wrap.ip5 {
-  top: 430rpx;
 }
 
 .func-wrap.fixed {

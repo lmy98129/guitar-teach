@@ -3,7 +3,6 @@
 /* root */
 .tpw-root {
   position: fixed;
-
   top: 0;
   width: 100%;
   padding-top: 60rpx;
@@ -67,8 +66,17 @@
   width: 100%;
 }
 
+
 .tpw-right-wrapper {
+  margin-right: 220rpx;
+}
+
+.tpw-right-wrapper.ip5 {
   margin-right: 240rpx;
+}
+
+.tpw-right-wrapper.ip6p {
+  margin-right: 200rpx;
 }
 
 /* background */

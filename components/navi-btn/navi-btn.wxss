@@ -1,38 +1,5 @@
 /* components/navi-btn/navi-btn.wxss */
-:host {
-  z-index: 120
-}
-
-@font-face {
-  font-family: 'iconfont';  /* project id 574679 */
-  src: url('//at.alicdn.com/t/font_574679_igaa6zoajjb.eot');
-  src: url('//at.alicdn.com/t/font_574679_igaa6zoajjb.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_574679_igaa6zoajjb.woff') format('woff'),
-  url('//at.alicdn.com/t/font_574679_igaa6zoajjb.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_574679_igaa6zoajjb.svg#iconfont') format('svg');
-}
-
-.iconfont {
-  font-family:"iconfont" !important;
-  font-size:16px;
-  font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-msnui-refresh-line:before { content: "\e649"; }
-
-.icon-plus:before { content: "\e636"; }
-
-.icon-fanhui:before { content: "\e602"; }
-
-.icon-baocun:before { content: "\e702"; }
-
-.icon-fanhui1:before { content: "\e679"; }
-
-.icon-icon:before { content: "\e67a"; }
-
-.icon-guanbi:before { content: "\e600"; }
+@import "../../app.wxss";
 
 .add-btn {
   z-index: 120;
