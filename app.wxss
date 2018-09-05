@@ -15,11 +15,11 @@ page {
 /* icon-font from alibaba */
 @font-face {
   font-family: 'iconfont';  /* project id 574679 */
-  src: url('//at.alicdn.com/t/font_574679_igaa6zoajjb.eot');
-  src: url('//at.alicdn.com/t/font_574679_igaa6zoajjb.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_574679_igaa6zoajjb.woff') format('woff'),
-  url('//at.alicdn.com/t/font_574679_igaa6zoajjb.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_574679_igaa6zoajjb.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_574679_30mdezfdb5m.eot');
+  src: url('//at.alicdn.com/t/font_574679_30mdezfdb5m.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_574679_30mdezfdb5m.woff') format('woff'),
+  url('//at.alicdn.com/t/font_574679_30mdezfdb5m.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_574679_30mdezfdb5m.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -43,6 +43,8 @@ page {
 .icon-icon:before { content: "\e67a"; }
 
 .icon-guanbi:before { content: "\e600"; }
+
+.icon-sousuo:before { content: "\e601"; }
 
 /* score-display */
 .key-wrapper {
@@ -68,8 +70,12 @@ page {
   line-height: 180%;
 }
 
-.key-wrapper .key .high,.time {
+.key-wrapper .key .high {
   line-height: 2%;
+}
+
+.key-wrapper .key .time {
+  line-height: 2%;  
 }
 
 .key-wrapper .key .low {

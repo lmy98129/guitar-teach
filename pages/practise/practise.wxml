@@ -1,0 +1,25 @@
+<!--pages/practise/practise.wxml-->
+<top-widget title="乐谱练习">
+  <navi-btn slot="back-btn" btn-style="back-btn" bind:tapbtn="bindBack" insert="true"/>
+</top-widget>
+<view class="root">
+  <image src="/images/bg2.png" class="upload-bg" style="filter:blur(30px);"></image>
+  <view class="prac-wrap" style="height: {{deviceWidth}}px; top: {{(deviceHeight - deviceWidth)/2}}px;">
+    <view class="item" bindtap="goPrev">
+      <view class="number">①</view>
+      <view class="name">查看乐谱</view>
+    </view>
+    <view class="item" bindtap="goFingerPrac">
+      <view class="number">②</view>
+      <view class="name">指弹练习</view>
+    </view>
+    <view class="item">
+      <view class="number">③</view>
+      <view class="name">慢弹练习</view>
+    </view>
+    <view class="item">
+      <view class="number">④</view>
+      <view class="name">连弹练习</view>
+    </view>
+  </view>
+</view>

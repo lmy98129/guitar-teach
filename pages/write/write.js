@@ -88,9 +88,9 @@ Page({
   },
 
   bindSetting(e) {
-    let self = this;
+    let self = this, index = e.target.dataset.index;
     wx.showActionSheet({
-      itemList: ['查看乐谱', '编辑乐谱', '删除乐谱'],
+      itemList: ['查看乐谱', '编辑乐谱', '上机练习', '删除乐谱'],
       itemColor: '#44b2b8',
       success: function (res) {
         switch(res.tapIndex) {
@@ -99,10 +99,15 @@ Page({
             break;
           case 1:
             wx.navigateTo({
-              url: '../keyboard/keyboard?index='+e.target.dataset.index,
+              url: '../keyboard/keyboard?index='+index,
             })
             break;
-          case 2: 
+          case 2:
+            wx.navigateTo({
+              url: '../practise/practise?index='+index,
+            })
+            break;
+          case 3: 
             wx.showModal({
               title: '提示',
               content: '确定删除该乐谱？',

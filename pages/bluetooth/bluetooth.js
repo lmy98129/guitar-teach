@@ -7,8 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: "蓝牙测试",
-    isDeviceGot: "设备扫描中"
+    isDeviceGot: "正在获取蓝牙设备列表"
   },
 
   /**
@@ -53,12 +52,15 @@ Page({
                     wx.getBluetoothDevices({
                       success: res => {
                         console.log(res);
+                        this.setData({
+                          isDeviceGot: "获取蓝牙连接列表成功"
+                        });
                         let devices = res.devices,
                           targetDevice;
                         for (let i=0; i<devices.length; i++) {
                           if (devices[i].name === "Smart_guitar") {
                             this.setData({
-                              isDeviceGot: "已搜索到设备"
+                              isDeviceGot: "已搜索到设备，正在与设备进行连接"
                             });
                             clearInterval(t1);
                             console.log("target device Found");
@@ -73,6 +75,9 @@ Page({
                               wx.createBLEConnection({
                                 deviceId: targetDeviceId,
                                 success: res => {
+                                  this.setData({
+                                    isDeviceGot: "与设备建立连接成功！"
+                                  });
                                   wx.getBLEDeviceServices({
                                     deviceId: targetDeviceId,
                                     success: res => {
@@ -112,7 +117,7 @@ Page({
                       },
                     })
                 }, 3000)
-              }, 6000)
+              }, 3000)
             },
             fail: res => {
               wx.showModal({

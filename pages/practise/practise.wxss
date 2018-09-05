@@ -1,0 +1,56 @@
+/* pages/practise/practise.wxss */
+@import "../../app.wxss";
+
+.root {
+  height: 80%;
+}
+
+.prac-wrap {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 102%;
+  z-index: 120;
+  margin: 0 auto;
+}
+
+.prac-wrap .item {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  color: #fff;
+  background: rgba(65, 65, 65, 0.6);
+  z-index: 200;
+  text-align: center;
+}
+
+.prac-wrap .item:active {
+  -webkit-transition-duration: 0s; 
+  -moz-transition-duration: 0s; 
+  transition-duration: 0ms; 
+  background: rgba(126, 126, 126, 0.6)
+}
+
+.prac-wrap .item:nth-child(1) {
+  border-right: 1rpx #fff solid;
+}
+
+.prac-wrap .item:nth-child(3) {
+  border-top: 1rpx #fff solid;
+}
+
+.prac-wrap .item:nth-child(4) {
+  border-left: 1rpx #fff solid;
+  border-top: 1rpx #fff solid; 
+}
+
+.prac-wrap .item .name {
+  margin: 0 auto;
+  font-size: 40rpx;
+}
+
+.prac-wrap .item .number {
+  margin: 50rpx auto;
+  font-size: 100rpx;
+}

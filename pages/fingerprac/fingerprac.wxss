@@ -1,0 +1,64 @@
+/* pages/fingerprac/fingerprac.wxss */
+
+.key-wrapper {
+  color: #fff;
+}
+
+.pannel-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 120;
+  background: rgba(65, 65, 65, 0.6);
+}
+
+.pannel-wrap .item {
+  color: #fff;
+  z-index: 200;
+  width: 25%;
+  line-height: 120rpx;
+  text-align: center;
+}
+
+.pannel-wrap .item:nth-child(4) {
+  width: 20%;
+}
+
+.pannel-wrap .item:active {
+  -webkit-transition-duration: 0s; 
+  -moz-transition-duration: 0s; 
+  transition-duration: 0ms; 
+  background: rgba(126, 126, 126, 0.6)
+}
+
+.key-wrapper .cursor {
+  color: #FF8C00;
+  font-size: 50rpx;
+  font-weight: bold;
+  position: relative;
+  top: -10rpx;
+}
+
+.cur-score {
+  width: 100%;
+  height: 200rpx;
+  font-size: 40rpx;
+  z-index: 200;
+  position: absolute;
+  bottom: 180rpx;
+}
+
+.cur-score .key-wrapper {
+  margin: 0 auto;
+  z-index: 200;  
+}
+
+.cur-score .key-wrapper .key {
+  z-index: 200;
+  font-size: 100rpx;
+  margin-left: 20rpx;
+}

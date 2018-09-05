@@ -11,7 +11,9 @@
     "pages/homework/homework",
     "pages/scoreprev/scoreprev",
     "pages/bluetooth/bluetooth",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/practise/practise",
+    "pages/fingerprac/fingerprac"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,7 +39,7 @@
         "selectedIconPath": "images/class-hl.png"
       },
       {
-        "pagePath": "pages/bluetooth/bluetooth",
+        "pagePath": "pages/message/message",
         "text": "消息",
         "iconPath": "images/message.png",
         "selectedIconPath": "images/message-hl.png"

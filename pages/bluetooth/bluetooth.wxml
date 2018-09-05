@@ -1,14 +1,13 @@
 <!--pages/bluetooth/bluetooth.wxml-->
-<view class="top-widget">
-  <view class="btn back new" bindtap="bindBack">
-    <image src="/images/back.png"></image>
-  </view>
-  <view class="page-title">
-    {{title}}
-  </view>
-</view>
-<view class="msg-list-top"></view>
+<top-widget title="蓝牙连接">
+  <navi-btn slot="back-btn" btn-style="back-btn" bind:tapbtn="bindBack" insert="true"/>
+</top-widget>
 <view class="root">
-  <view>{{isDeviceGot}}</view>
+  <view class="con-wrap">
+    <view class="status">
+      <view class="search-icon icon-sousuo iconfont"></view>
+    </view>
+    <view class="hint">{{isDeviceGot}}</view>
+  </view>
 </view>
 

@@ -1,2 +1,4 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<top-widget title="消息">
+  <navi-btn slot="navi-btn" btn-style="add-btn" />
+</top-widget>
