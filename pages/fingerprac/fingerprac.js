@@ -115,8 +115,33 @@ Page({
   },
 
   emitScore() {
-    let message = "@TS"+keyArrayEnc[this.data.cursorPos]+"#";
-    console.log(message);
+    let message = "@T0011"+keyArrayEnc[this.data.cursorPos]+"#",
+      targetDeviceId = wx.getStorageSync("deviceId");
+    let buffer = new ArrayBuffer(message.length);
+    let dataView = new DataView(buffer);
+    let index = 0;
+    for (let i=0; i<message.length; i+=2) {
+      let code = parseInt(message.substr(i,2),16)
+      dataView.setUint8(index, code);
+      index++;
+    }
+    wx.writeBLECharacteristicValue({
+      deviceId: targetDeviceId,
+      serviceId: "6E400001-B5A3-F393-E0A9-E50E24DCCA9E",
+      characteristicId: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E",
+      value: buffer,
+      success: function(res) {
+        console.log(res);
+      },
+      fail: function(err) {
+        console.log(err);
+        wx.showModal({
+          title: '发送失败',
+          content: '设备连接已断开，请点击左侧蓝牙连接按钮进行连接',
+          showCancel: false
+        })
+      }
+    })
   },
 
   bindBack() {

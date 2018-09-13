@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isDeviceGot: "正在获取蓝牙设备列表"
+    isDeviceGot: "正在搜索蓝牙，请打开设备蓝牙开关"
   },
 
   /**
@@ -36,17 +36,11 @@ Page({
     wx.openBluetoothAdapter({
       success: res => {
         console.log(res);
-        wx.showToast({
-          title: '蓝牙连接成功',
-        });
         setTimeout(() => {
           wx.startBluetoothDevicesDiscovery({
             allowDuplicatesKey: true,
             success: res => {
               console.log(res);
-              // wx.onBluetoothDeviceFound(res => {
-              //   console.log(res);
-              // })
               setTimeout(() => {
                 var t1 = setInterval(() => {
                     wx.getBluetoothDevices({
@@ -60,7 +54,7 @@ Page({
                         for (let i=0; i<devices.length; i++) {
                           if (devices[i].name === "Smart_guitar") {
                             this.setData({
-                              isDeviceGot: "已搜索到设备，正在与设备进行连接"
+                              isDeviceGot: "正在与设备进行连接"
                             });
                             clearInterval(t1);
                             console.log("target device Found");
@@ -78,37 +72,7 @@ Page({
                                   this.setData({
                                     isDeviceGot: "与设备建立连接成功！"
                                   });
-                                  wx.getBLEDeviceServices({
-                                    deviceId: targetDeviceId,
-                                    success: res => {
-                                      console.log(res);
-                                      let services = res.services;
-                                      for (let i=0; i<services.length; i++) {
-                                        let currentServiceId = services[i].uuid;
-                                        wx.getBLEDeviceCharacteristics({
-                                          deviceId: targetDeviceId,
-                                          serviceId: currentServiceId,
-                                          success: function(res) {
-                                            console.log(res);
-                                            wx.onBLECharacteristicValueChange(function (res) {
-                                              console.log(res);
-                                              console.log('characteristic value comed:', util.ab2hex(res.value));
-                                            })
-                                            if (res.characteristics[0].uuid == "00002A00-0000-1000-8000-00805F9B34FB") {
-                                              wx.readBLECharacteristicValue({
-                                                deviceId: targetDeviceId,
-                                                serviceId: currentServiceId,
-                                                characteristicId: "00002A00-0000-1000-8000-00805F9B34FB",
-                                                success: function(res) {
-                                                  console.log(res);
-                                                },
-                                              })
-                                            }
-                                          },
-                                        })
-                                      }
-                                    },
-                                  })
+                                  wx.setStorageSync("deviceId", targetDeviceId);
                                 },
                               })
                             },
@@ -122,7 +86,7 @@ Page({
             fail: res => {
               wx.showModal({
                 title: '蓝牙连接失败',
-                content: '请尝试打开手机蓝牙开关，并重新进入当前页面',
+                content: '请尝试打开手机蓝牙、定位开关，开启微信APP蓝牙、定位等权限，并重新进入蓝牙连接页面',
                 showCancel: false
               })
             }
@@ -132,7 +96,7 @@ Page({
       fail: res => {
         wx.showModal({
           title: '蓝牙连接失败',
-          content: '请尝试打开手机蓝牙开关，并重新进入当前页面',
+          content: '请尝试打开手机蓝牙、定位开关，开启微信APP蓝牙、定位等权限，并重新进入蓝牙连接页面',
           showCancel: false
         })
       }

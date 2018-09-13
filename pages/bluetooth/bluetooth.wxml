@@ -3,6 +3,7 @@
   <navi-btn slot="back-btn" btn-style="back-btn" bind:tapbtn="bindBack" insert="true"/>
 </top-widget>
 <view class="root">
+<image src="/images/bg2.png" class="upload-bg" style="filter:blur(30px);"></image>
   <view class="con-wrap">
     <view class="status">
       <view class="search-icon icon-sousuo iconfont"></view>
