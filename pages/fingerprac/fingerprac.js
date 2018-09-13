@@ -1,5 +1,6 @@
 // pages/fingerprac/fingerprac.js
 const decode = require("../../utils/decode");
+const encode = require("../../utils/encode");
 var keyArrayEnc = "";
 
 Page({
@@ -115,16 +116,17 @@ Page({
   },
 
   emitScore() {
-    let message = "@T0011"+keyArrayEnc[this.data.cursorPos]+"#",
-      targetDeviceId = wx.getStorageSync("deviceId");
+    let message = "@TS"+keyArrayEnc[this.data.cursorPos]+"#";
+    let byteArray = encode.str2bytes(message);
+    let targetDeviceId = wx.getStorageSync("deviceId");
     let buffer = new ArrayBuffer(message.length);
     let dataView = new DataView(buffer);
     let index = 0;
-    for (let i=0; i<message.length; i+=2) {
-      let code = parseInt(message.substr(i,2),16)
-      dataView.setUint8(index, code);
-      index++;
+    
+    for (let i=0; i<message.length; i++) {
+      dataView.setUint8(i, byteArray[i]);
     }
+
     wx.writeBLECharacteristicValue({
       deviceId: targetDeviceId,
       serviceId: "6E400001-B5A3-F393-E0A9-E50E24DCCA9E",
