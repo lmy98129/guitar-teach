@@ -1,5 +1,5 @@
 // pages/practise/practise.js
-var index;
+var index, code;
 
 Page({
 
@@ -8,7 +8,8 @@ Page({
    */
   data: {
     deviceHeight: '',
-    deviceWidth: ''
+    deviceWidth: '',
+    index: -1,
   },
 
   /**
@@ -16,7 +17,10 @@ Page({
    */
   onLoad: function (options) {
     if (options.index != undefined) {
-      index = options.index;
+      index = options.index
+    }
+    if (options.code != undefined) {
+      code = options.code; 
     }
   },
 
@@ -46,7 +50,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    code = undefined;
   },
 
   /**
@@ -84,15 +88,47 @@ Page({
   },
 
   goPrev() {
-    wx.navigateTo({
-      url: '/pages/scoreprev/scoreprev?index='+index,
-    })
+    if (code != undefined) 
+      wx.navigateTo({
+        url: '../scoreprev/scoreprev?code=' + code,
+      })
+    else 
+      wx.navigateTo({
+        url: '../scoreprev/scoreprev?index=' + index,
+      })
   },
 
   goFingerPrac() {
-    wx.navigateTo({
-      url: '/pages/fingerprac/fingerprac?index=' + index,
-    })
+    if (code != undefined) 
+      wx.navigateTo({
+        url: '../fingerprac/fingerprac?code=' + code,
+      })
+    else 
+      wx.navigateTo({
+        url: '../fingerprac/fingerprac?index=' + index,
+      })
+  },
+
+  goSlowPrac() {
+    if (code != undefined) 
+      wx.navigateTo({
+        url: '../speedprac/speedprac?code=' + code,
+      })
+    else 
+      wx.navigateTo({
+        url: '../speedprac/speedprac?index=' + index + "&mode=slow",
+      })
+  },
+
+  goNormalPrac() {
+    if (code != undefined)
+      wx.navigateTo({
+        url: '../speedprac/speedprac?code=' + code,
+      })
+    else
+      wx.navigateTo({
+        url: '../speedprac/speedprac?index=' + index + "&mode=normal",
+      })
   }
 
 })

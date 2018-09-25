@@ -13,7 +13,8 @@
     "pages/bluetooth/bluetooth",
     "pages/message/message",
     "pages/practise/practise",
-    "pages/fingerprac/fingerprac"
+    "pages/fingerprac/fingerprac",
+    "pages/speedprac/speedprac"
   ],
   "window": {
     "backgroundTextStyle": "light",

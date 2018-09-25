@@ -13,11 +13,11 @@
       <view class="number">②</view>
       <view class="name">指弹练习</view>
     </view>
-    <view class="item">
+    <view class="item" bindtap="goSlowPrac">
       <view class="number">③</view>
       <view class="name">慢弹练习</view>
     </view>
-    <view class="item">
+    <view class="item" bindtap="goNormalPrac">
       <view class="number">④</view>
       <view class="name">连弹练习</view>
     </view>

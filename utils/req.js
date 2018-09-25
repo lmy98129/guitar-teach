@@ -4,6 +4,13 @@ const header = {
   'content-type': 'application/x-www-form-urlencoded',
   'Accept': 'application/json'
 }
+const preCode = [{
+  title: "童年",
+  code: "childhood"
+}, {
+  title: "小星星",
+  code: "starlet"
+}]
 
 const getScoreList = (uploader, self) => {
   wx.request({
@@ -14,6 +21,7 @@ const getScoreList = (uploader, self) => {
     success: res => {
       console.log("download success", res);
       let resArray = res.data
+      resArray = resArray.concat(preCode);
       resArray.sort((a, b) => a.title.localeCompare(b.title, 'zh-Hans-CN', { sensitivity: 'accent' }));
       self.setData({
         scoreList: resArray

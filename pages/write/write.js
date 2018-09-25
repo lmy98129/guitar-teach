@@ -38,9 +38,14 @@ Page({
 
 
   getPrev(e) {
-    wx.navigateTo({
-      url: '/pages/scoreprev/scoreprev?index='+e.target.dataset.index,
-    })
+    if (e.target.dataset.code) 
+      wx.navigateTo({
+        url: '../practise/practise?code='+e.target.dataset.code,
+      })
+    else
+      wx.navigateTo({
+        url: '../scoreprev/scoreprev?index='+e.target.dataset.index,
+      })
   },
   /**
    * 生命周期函数--监听页面隐藏

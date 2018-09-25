@@ -4,12 +4,12 @@
 <view class="root">
   <view class="comp-list-wrap">
     <block wx:for="{{scoreList}}" wx:key="{{index}}">
-      <view class="comp-list-item" data-index="{{index}}">
-        <view class="covered" data-index="{{index}}" bindtap="getPrev">
-          <view class="title" data-index="{{index}}">
+      <view class="comp-list-item" data-index="{{index}}" data-code='{{item.code}}'>
+        <view class="covered" data-index="{{index}}" data-code='{{item.code}}' bindtap="getPrev">
+          <view class="title" data-index="{{index}}" data-code='{{item.code}}'>
             {{item.title}}
           </view>
-            <view class="arrow-icon icon-fanhui1 iconfont" data-index="{{index}}"></view>
+            <view class="arrow-icon icon-fanhui1 iconfont" data-index="{{index}}" data-code='{{item.code}}'></view>
         </view>
         <navi-btn btn-style="setting-btn" custom-style="color: #999; line-height: 130%; font-size: 40rpx; margin-left:25rpx;" insert="true" bind:tapbtn="bindSetting" data-id="{{item.id}}" data-index="{{index}}"/>
       </view>

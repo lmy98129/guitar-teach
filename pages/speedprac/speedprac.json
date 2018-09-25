@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "top-widget": "/components/top-widget/top-widget",
+    "navi-btn": "/components/navi-btn/navi-btn"
+  }
+}
